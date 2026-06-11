@@ -1,936 +1,909 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vitrina Studio — Diseño Web, Branding & Presencia Digital | Lima, Perú</title>
-  <meta name="description" content="Estudio digital especializado en diseño web, branding y presencia digital. Modernizamos negocios locales en Lima, Perú."/>
-  <meta name="keywords" content="diseño web Lima, branding Peru, presencia digital, páginas web profesionales, identidad visual, Vitrina Studio"/>
-  <meta name="author" content="Vitrina Studio"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://vitrina-studio.com/"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:title" content="Vitrina Studio — Diseño Web & Branding | Lima, Perú"/>
-  <meta property="og:description" content="Modernizamos negocios locales. Diseño web, branding y presencia digital para negocios que quieren verse modernos y profesionales."/>
-  <meta property="og:url" content="https://vitrina-studio.com/"/>
-  <meta property="og:locale" content="es_PE"/>
-  <meta property="og:image" content="https://vitrina-studio.com/assets/og-image.png"/>
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-  <meta property="og:image:alt" content="Vitrina Studio — Haz que tu marca destaque"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Vitrina Studio — Diseño Web & Branding"/>
-  <meta name="twitter:description" content="Modernizamos negocios locales. Diseño web, branding y presencia digital en Lima, Perú."/>
-  <meta name="twitter:image" content="https://vitrina-studio.com/assets/og-image.png"/>
-  <link rel="icon" type="image/png" href="/assets/favicon.png"/>
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
-  <meta name="theme-color" content="#0B0B0B"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitrina Studio — Diseño Web & Branding | Lima, Perú</title>
+  <meta name="description" content="Diseño web, branding y presencia digital para negocios locales en Lima. Webs rápidas y seguras, kit de marca y sistema de pedidos por WhatsApp. Agenda tu sesión estratégica gratuita.">
+  <link rel="canonical" href="https://vitrina-studio.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vitrina-studio.com/">
+  <meta property="og:title" content="Vitrina Studio — Diseño Web & Branding | Lima, Perú">
+  <meta property="og:description" content="Haz que tu marca destaque. Webs rápidas y seguras, branding y pedidos por WhatsApp para negocios locales en Lima.">
+  <meta property="og:image" content="https://vitrina-studio.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_PE">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Vitrina Studio — Diseño Web & Branding | Lima, Perú">
+  <meta name="twitter:description" content="Haz que tu marca destaque. Webs rápidas y seguras, branding y pedidos por WhatsApp para negocios locales en Lima.">
+  <meta name="twitter:image" content="https://vitrina-studio.com/assets/og-image.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <meta name="theme-color" content="#0B0B0B">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Vitrina Studio",
+    "url": "https://vitrina-studio.com/",
+    "logo": "https://vitrina-studio.com/assets/favicon-192.png",
+    "image": "https://vitrina-studio.com/assets/og-image.png",
+    "telephone": "+51904113558",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lima",
+      "addressCountry": "PE"
+    },
+    "areaServed": "Lima",
+    "priceRange": "$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Vitrina Studio",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Diseño Web" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding e Identidad de Marca" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Presencia Digital" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistema de Pedidos por WhatsApp" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tienda Virtual" } }
+      ]
+    }
+  }
+  </script>
+
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    /* ============ TOKENS ============ */
     :root{
-      --black:#0B0B0B;--surface:#111111;--surface2:#161616;--surface3:#1a1a1a;
-      --border:rgba(255,255,255,0.07);--border-hover:rgba(59,130,246,0.4);
-      --blue:#3B82F6;--blue-dim:rgba(59,130,246,0.12);--blue-glow:rgba(59,130,246,0.25);
-      --white:#FFFFFF;--gray:#888888;--gray2:#444444;
-      --font-display:'Syne',sans-serif;--font-body:'DM Sans',sans-serif;
-    }
-    html{scroll-behavior:smooth}
-    body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+      --negro:#0B0B0B;
+      --sup-1:#111111;
+      --sup-2:#161616;
+      --sup-3:#1a1a1a;
+      --azul:#3B82F6;
+      --azul-press:#2563EB;
+      --blanco:#FFFFFF;
+      --gris-1:#C3C7CF;   /* texto secundario */
+      --gris-2:#8B919D;   /* caption */
+      --linea:rgba(255,255,255,.08);
 
-    /* CURSOR */
-    .cursor{width:8px;height:8px;background:var(--blue);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;mix-blend-mode:screen}
-    .cursor-ring{width:36px;height:36px;border:1px solid rgba(59,130,246,0.5);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transition:all 0.25s ease}
+      --display:'Syne',sans-serif;
+      --cuerpo:'DM Sans',sans-serif;
 
-    /* NOISE */
-    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");opacity:0.03;pointer-events:none;z-index:1000}
+      /* Jerarquía tipográfica fija — 5 niveles */
+      --t-h1:clamp(2.5rem, 1.2rem + 6vw, 5rem);
+      --t-h2:clamp(1.75rem, 1.1rem + 3vw, 3rem);
+      --t-h3:clamp(1.15rem, 1rem + .8vw, 1.5rem);
+      --t-cuerpo:clamp(1rem, .95rem + .25vw, 1.125rem);
+      --t-caption:clamp(.8rem, .78rem + .15vw, .875rem);
 
-    /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 5%;height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);backdrop-filter:blur(20px);background:rgba(11,11,11,0.85);transition:all 0.3s ease}
-    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-    .nav-logo img{width:36px;height:36px;border-radius:50%}
-    .nav-logo-text{font-family:var(--font-display);font-weight:700;font-size:1rem;letter-spacing:0.08em;color:var(--white);text-align:center}
-    .nav-logo-text span{color:var(--blue);font-weight:400;font-size:0.65rem;letter-spacing:0.25em;display:block;margin-top:-2px}
-    .nav-links{display:flex;gap:2rem;list-style:none}
-    .nav-links a{color:var(--gray);text-decoration:none;font-size:0.875rem;font-weight:400;letter-spacing:0.02em;transition:color 0.2s}
-    .nav-links a:hover{color:var(--white)}
-    .nav-cta{background:var(--blue)!important;color:var(--white)!important;padding:0.5rem 1.25rem;border-radius:8px;font-weight:500!important;transition:opacity 0.2s!important}
-    .nav-cta:hover{opacity:0.85}
-    .nav-mobile-btn{display:none;background:none;border:1px solid var(--border);border-radius:10px;color:var(--white);cursor:pointer;width:40px;height:40px;align-items:center;justify-content:center;flex-direction:column;gap:5px;padding:0;transition:border-color 0.2s}
-    .nav-mobile-btn:hover{border-color:var(--blue)}
-    .hamburger-line{width:18px;height:1.5px;background:var(--white);border-radius:2px;transition:all 0.3s ease;display:block}
-    .nav-mobile-btn.open .hamburger-line:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-    .nav-mobile-btn.open .hamburger-line:nth-child(2){opacity:0;transform:scaleX(0)}
-    .nav-mobile-btn.open .hamburger-line:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+      /* Escala de espaciado 8px */
+      --s-1:8px; --s-2:16px; --s-3:24px; --s-4:32px; --s-6:48px; --s-8:64px;
 
-    /* MOBILE MENU */
-    .mobile-menu-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);z-index:98;opacity:0;transition:opacity 0.3s ease}
-    .mobile-menu-overlay.open{opacity:1}
-    .mobile-menu-panel{position:fixed;top:0;right:0;bottom:0;width:min(320px,85vw);background:#0e0e0e;border-left:1px solid var(--border);z-index:99;transform:translateX(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column}
-    .mobile-menu-panel.open{transform:translateX(0)}
-    .mob-menu-header{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border)}
-    .mob-menu-logo{display:flex;align-items:center;gap:10px}
-    .mob-menu-logo img{width:30px;height:30px;border-radius:50%}
-    .mob-menu-logo-text{font-family:var(--font-display);font-weight:700;font-size:0.85rem;letter-spacing:0.06em}
-    .mob-menu-close{width:34px;height:34px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;color:var(--gray);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all 0.2s}
-    .mob-menu-close:hover{border-color:var(--blue);color:var(--blue)}
-    .mob-menu-nav{flex:1;padding:2rem 1.5rem;display:flex;flex-direction:column;gap:4px}
-    .mob-menu-label{font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray2);margin-bottom:0.75rem;padding-left:4px}
-    .mob-nav-link{display:flex;align-items:center;justify-content:space-between;padding:1rem;border-radius:12px;text-decoration:none;color:var(--gray);font-size:1rem;font-weight:400;font-family:var(--font-display);transition:all 0.2s ease;border:1px solid transparent}
-    .mob-nav-link:hover{background:rgba(255,255,255,0.04);border-color:var(--border);color:var(--white)}
-    .mob-nav-link span{font-size:0.7rem;color:var(--gray2)}
-    .mob-menu-footer{padding:1.5rem;border-top:1px solid var(--border)}
-    .mob-cta-link{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--blue);color:var(--white);text-decoration:none;padding:1rem;border-radius:12px;font-weight:600;font-size:0.95rem;transition:all 0.2s;box-shadow:0 0 30px rgba(59,130,246,0.25)}
-    .mob-cta-link:hover{box-shadow:0 0 50px rgba(59,130,246,0.45);transform:translateY(-1px)}
-    .mob-social-row{display:flex;gap:10px;margin-top:1rem;justify-content:center}
-    .mob-social-link{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:0.65rem;text-decoration:none;color:var(--gray);font-size:0.75rem;transition:all 0.2s}
-    .mob-social-link:hover{border-color:var(--blue);color:var(--blue)}
-
-    /* HERO */
-    #hero{min-height:100vh;display:flex;align-items:center;padding:120px 5% 80px;position:relative;overflow:hidden}
-    .hero-bg-glow{position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(59,130,246,0.12) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
-    .hero-bg-glow2{position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,0.08) 0%,transparent 70%);top:20%;right:10%;pointer-events:none}
-    #particles-canvas{position:absolute;inset:0;pointer-events:none;z-index:0}
-    .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;width:100%;max-width:1200px;margin:0 auto;position:relative;z-index:1}
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);border-radius:100px;padding:6px 14px;font-size:0.75rem;font-weight:500;color:var(--blue);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:1.5rem;animation:fadeUp 0.8s ease both}
-    .hero-badge::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;animation:pulse 2s ease infinite}
-    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
-    h1{font-family:var(--font-display);font-size:clamp(2.8rem,5vw,6rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;animation:fadeUp 0.8s 0.1s ease both}
-    h1 .accent{color:var(--blue)}
-    .hero-sub{margin-top:1.5rem;color:var(--gray);font-size:1.05rem;font-weight:300;line-height:1.7;max-width:480px;animation:fadeUp 0.8s 0.2s ease both}
-    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.5rem;animation:fadeUp 0.8s 0.3s ease both}
-    .btn-primary{background:var(--blue);color:var(--white);border:none;padding:0.85rem 2rem;border-radius:10px;font-family:var(--font-body);font-size:0.9rem;font-weight:500;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s ease;box-shadow:0 0 30px rgba(59,130,246,0.3)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 50px rgba(59,130,246,0.5)}
-    .btn-ghost{background:transparent;color:var(--white);border:1px solid var(--border);padding:0.85rem 2rem;border-radius:10px;font-family:var(--font-body);font-size:0.9rem;font-weight:500;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s ease}
-    .btn-ghost:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
-    .btn-outline{background:transparent;color:var(--blue);border:1px solid var(--blue);padding:0.85rem 2rem;border-radius:10px;font-family:var(--font-body);font-size:0.9rem;font-weight:500;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s ease}
-    .btn-outline:hover{background:var(--blue);color:var(--white);transform:translateY(-2px)}
-    .scroll-ind{display:flex;align-items:center;gap:8px;color:var(--gray2);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;margin-top:3rem;animation:fadeUp 0.8s 0.5s ease both}
-    .scroll-line{width:30px;height:1px;background:var(--gray2)}
-
-    /* HERO MOCKUP */
-    .hero-mockup{position:relative;animation:fadeLeft 0.8s 0.4s ease both}
-    .mockup-browser{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,0.6),0 0 60px rgba(59,130,246,0.08);transform:perspective(1000px) rotateY(-5deg) rotateX(2deg);transition:transform 0.5s ease}
-    .mockup-browser:hover{transform:perspective(1000px) rotateY(0deg) rotateX(0deg)}
-    .browser-bar{background:#1a1a1a;padding:12px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border)}
-    .browser-dots{display:flex;gap:6px}
-    .browser-dot{width:10px;height:10px;border-radius:50%}
-    .d1{background:#ff5f57}.d2{background:#febc2e}.d3{background:#28c840}
-    .browser-url{flex:1;background:rgba(255,255,255,0.05);border-radius:6px;padding:5px 12px;font-size:0.7rem;color:var(--gray)}
-    .browser-content{padding:24px;min-height:300px;background:linear-gradient(135deg,#0f0f0f 0%,#111827 100%)}
-    .mini-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
-    .mini-logo-bar{display:flex;gap:6px}
-    .mini-logo-bar span{width:50px;height:6px;border-radius:3px}
-    .ml1{background:var(--blue)}.ml2{background:rgba(255,255,255,0.15);width:30px!important}
-    .mini-nav-links{display:flex;gap:10px}
-    .mini-nav-links span{width:28px;height:5px;border-radius:3px;background:rgba(255,255,255,0.1)}
-    .mini-h1{height:14px;width:70%;border-radius:4px;background:linear-gradient(90deg,rgba(255,255,255,0.9),rgba(255,255,255,0.4));margin-bottom:8px}
-    .mini-h1b{height:14px;width:50%;border-radius:4px;background:linear-gradient(90deg,var(--blue),rgba(59,130,246,0.3));margin-bottom:12px}
-    .mini-p{height:6px;border-radius:3px;background:rgba(255,255,255,0.15);margin-bottom:5px}
-    .mini-p:last-child{width:70%}
-    .mini-btns{display:flex;gap:8px;margin-top:16px}
-    .mini-btn{height:28px;border-radius:6px}
-    .mb1{width:80px;background:var(--blue);box-shadow:0 0 15px rgba(59,130,246,0.4)}.mb2{width:70px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1)}
-    .mini-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px}
-    .mini-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:10px}
-    .mini-card-icon{width:20px;height:20px;border-radius:5px;background:var(--blue-dim);margin-bottom:6px}
-    .mini-card-line{height:4px;border-radius:2px;background:rgba(255,255,255,0.15);margin-bottom:4px}
-    .float-el{position:absolute;animation:float 4s ease-in-out infinite}
-    .float-el:nth-child(2){animation-delay:-1.5s}.float-el:nth-child(3){animation-delay:-3s}
-    .float-card{background:var(--surface2);border:1px solid var(--border);border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 20px 40px rgba(0,0,0,0.4);white-space:nowrap}
-    .float-card .fc-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem}
-    .fc-blue{background:var(--blue-dim)}
-    .float-card .fc-text{font-size:0.75rem}
-    .float-card .fc-text strong{display:block;color:var(--white);font-weight:600}
-    .float-card .fc-text span{color:var(--gray);font-size:0.65rem}
-    .fe1{top:-20px;right:-30px}.fe2{bottom:30px;left:-40px}
-    @keyframes float{0%,100%{transform:translateY(0px)}50%{transform:translateY(-10px)}}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fadeLeft{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:translateX(0)}}
-
-    /* SECTIONS */
-    section{padding:100px 5%;max-width:1200px;margin:0 auto}
-    .section-label{display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
-    .section-label::before{content:'';width:20px;height:1px;background:var(--blue)}
-    .section-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.5rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1}
-    .section-sub{color:var(--gray);font-size:1rem;font-weight:300;margin-top:0.75rem;max-width:500px;line-height:1.7}
-    .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-    .divider{width:calc(100% - 10%);max-width:1200px;height:1px;background:var(--border);margin:0 auto}
-
-    /* SERVICES */
-    .services-header{text-align:center;margin-bottom:4rem}
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-    .service-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:2.5rem 2rem;position:relative;overflow:hidden;transition:all 0.3s ease;cursor:default}
-    .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:0;transition:opacity 0.3s ease}
-    .service-card:hover{border-color:var(--border-hover);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.3),0 0 40px rgba(59,130,246,0.05)}
-    .service-card:hover::before{opacity:1}
-    .service-icon{width:48px;height:48px;border-radius:12px;background:var(--blue-dim);border:1px solid rgba(59,130,246,0.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.5rem}
-    .service-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:0.75rem;letter-spacing:-0.02em}
-    .service-card p{color:var(--gray);font-size:0.9rem;line-height:1.7;font-weight:300}
-    .service-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:1.5rem}
-    .service-tag{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:100px;padding:3px 10px;font-size:0.7rem;color:var(--gray);letter-spacing:0.02em}
-
-    /* PROCESO */
-    #proceso{padding-top:0}
-    .proceso-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
-    .paso-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:1.75rem;position:relative;transition:all 0.3s ease}
-    .paso-card:hover{border-color:var(--border-hover);transform:translateY(-3px)}
-    .paso-num{font-family:var(--font-display);font-size:0.7rem;font-weight:700;color:var(--blue);letter-spacing:0.15em;margin-bottom:1rem;display:flex;align-items:center;gap:8px}
-    .paso-num::after{content:'';flex:1;height:1px;background:rgba(59,130,246,0.2)}
-    .paso-icon{font-size:1.5rem;margin-bottom:0.75rem}
-    .paso-card h4{font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:0.5rem}
-    .paso-card p{color:var(--gray);font-size:0.82rem;line-height:1.6;font-weight:300}
-    .entregables{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:2.5rem;margin-top:2rem}
-    .entregables h4{font-family:var(--font-display);font-weight:700;font-size:1rem;margin-bottom:1.5rem;color:var(--gray)}
-    .entregables-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-    .entregable-item{display:flex;align-items:center;gap:10px;font-size:0.85rem;color:var(--gray)}
-    .entregable-item .ei-icon{width:32px;height:32px;border-radius:8px;background:var(--blue-dim);border:1px solid rgba(59,130,246,0.15);display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0}
-    .proceso-cta{text-align:center;margin-top:2.5rem;padding:2rem;background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.1);border-radius:16px}
-    .proceso-cta p{color:var(--gray);font-size:0.9rem;margin-bottom:1rem}
-    .proceso-cta strong{color:var(--white)}
-
-    /* PROYECTOS */
-    #proyectos{padding-top:0}
-    .project-wrap{background:var(--surface);border:1px solid var(--border);border-radius:24px;overflow:hidden}
-    .project-header{padding:3rem;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap}
-    .project-badge-en{display:inline-block;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);color:var(--blue);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:1rem;font-weight:600}
-    .project-header h3{font-family:var(--font-display);font-size:1.8rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.5rem}
-    .project-header p{color:var(--gray);font-size:0.9rem;max-width:380px;line-height:1.7;font-weight:300}
-    .project-chips{display:flex;gap:8px;flex-wrap:wrap;align-self:flex-end}
-    .chip{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:0.75rem;color:var(--gray)}
-
-    /* Terraza brand showcase */
-    .terraza-showcase{display:grid;grid-template-columns:1fr 1fr;gap:0}
-    .terraza-brand{padding:2.5rem;border-right:1px solid var(--border)}
-    .terraza-brand h4{font-family:var(--font-display);font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray2);margin-bottom:1.5rem}
-    .brand-colors{display:flex;gap:8px;margin-bottom:1.5rem}
-    .brand-color{width:36px;height:36px;border-radius:8px;position:relative}
-    .brand-color span{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);font-size:0.55rem;color:var(--gray2);white-space:nowrap}
-    .brand-name{font-family:'Playfair Display',serif;font-size:1.6rem;color:#DAA017;margin-bottom:0.5rem}
-    .brand-tagline{font-size:0.8rem;color:var(--gray);font-style:italic;margin-bottom:1.5rem}
-    .brand-essence{display:flex;flex-wrap:wrap;gap:6px}
-    .brand-tag{background:rgba(218,160,23,0.1);border:1px solid rgba(218,160,23,0.2);border-radius:100px;padding:3px 10px;font-size:0.7rem;color:#DAA017}
-    .terraza-info{padding:2.5rem}
-    .terraza-info h4{font-family:var(--font-display);font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray2);margin-bottom:1.5rem}
-    .trabajo-item{display:flex;gap:12px;margin-bottom:1.25rem;align-items:flex-start}
-    .trabajo-icon{width:32px;height:32px;border-radius:8px;background:var(--blue-dim);border:1px solid rgba(59,130,246,0.15);display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0;margin-top:2px}
-    .trabajo-text strong{display:block;font-size:0.85rem;font-weight:600;margin-bottom:2px}
-    .trabajo-text span{font-size:0.78rem;color:var(--gray);font-weight:300}
-    .terraza-status{margin-top:1.5rem;background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.1);border-radius:10px;padding:1rem;display:flex;align-items:center;gap:10px}
-    .status-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);animation:pulse 2s ease infinite;flex-shrink:0}
-    .terraza-status span{font-size:0.8rem;color:var(--gray)}
-
-    /* WHY */
-    #por-que{padding-top:0}
-    .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:3rem}
-    .why-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;display:flex;gap:1.25rem;align-items:flex-start;transition:all 0.3s ease}
-    .why-card:hover{border-color:var(--border-hover);transform:translateY(-2px)}
-    .why-icon{width:40px;height:40px;border-radius:10px;background:var(--blue-dim);border:1px solid rgba(59,130,246,0.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-    .why-text h4{font-family:var(--font-display);font-size:1rem;font-weight:700;margin-bottom:0.35rem;letter-spacing:-0.01em}
-    .why-text p{color:var(--gray);font-size:0.85rem;line-height:1.6;font-weight:300}
-
-    /* CTA FINAL */
-    #contacto{padding:80px 5% 120px;max-width:1200px;margin:0 auto}
-    .cta-box{background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:5rem 4rem;text-align:center;position:relative;overflow:hidden}
-    .cta-box::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(59,130,246,0.12) 0%,transparent 70%);pointer-events:none}
-    .cta-box h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.5rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1rem;position:relative;z-index:1}
-    .cta-box p{color:var(--gray);font-size:1rem;font-weight:300;margin-bottom:2.5rem;position:relative;z-index:1}
-    .cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
-
-    /* FOOTER */
-    footer{border-top:1px solid var(--border);padding:3rem 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
-    .footer-logo{display:flex;align-items:center;gap:10px}
-    .footer-logo img{width:28px;height:28px;border-radius:50%}
-    .footer-logo-text{font-family:var(--font-display);font-weight:700;font-size:0.85rem;letter-spacing:0.05em}
-    .footer-copy{color:var(--gray2);font-size:0.8rem}
-    .social-links{display:flex;gap:12px}
-    .social-link{width:38px;height:38px;border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:var(--gray);transition:all 0.2s ease;font-size:1rem}
-    .social-link:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px);box-shadow:0 0 20px rgba(59,130,246,0.2)}
-
-    /* WA FLOTANTE */
-    .wa-float{position:fixed;bottom:28px;right:28px;z-index:500;animation:fadeUp 1s 1s ease both}
-    .wa-float a{width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:all 0.2s ease}
-    .wa-float a:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,0.6)}
-    .wa-tooltip{position:absolute;right:68px;top:50%;transform:translateY(-50%);background:var(--surface3);border:1px solid var(--border);border-radius:10px;padding:8px 14px;font-size:0.78rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s;color:var(--white)}
-    .wa-float:hover .wa-tooltip{opacity:1}
-
-    /* BANNER DIAGNÓSTICO */
-    .diag-banner{background:linear-gradient(90deg,rgba(59,130,246,0.15),rgba(59,130,246,0.08),rgba(59,130,246,0.15));border-bottom:1px solid rgba(59,130,246,0.2);padding:10px 5%;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;text-align:center}
-    
-    
-    
-    
-
-    /* NAV PHONE */
-    .nav-phone{display:flex;align-items:center;gap:6px;background:var(--blue);color:var(--white);text-decoration:none;padding:6px 14px;border-radius:8px;font-size:0.8rem;font-weight:600;transition:opacity 0.2s;white-space:nowrap}
-    .nav-phone:hover{opacity:0.85}
-    .nav-right{display:flex;align-items:center;gap:12px}
-
-    /* PLANES */
-    #planes{padding-top:0}
-    .planes-header{text-align:center;margin-bottom:3.5rem}
-    .planes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-    .plan-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:2rem;position:relative;transition:all 0.3s ease;display:flex;flex-direction:column}
-    .plan-card:hover{border-color:var(--border-hover);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
-    .plan-card.featured{border-color:var(--blue);box-shadow:0 0 40px rgba(59,130,246,0.12)}
-    .plan-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 14px;border-radius:100px;white-space:nowrap}
-    .plan-name{font-family:var(--font-display);font-size:1.3rem;font-weight:800;margin-bottom:0.5rem;letter-spacing:-0.02em}
-    .plan-desc{color:var(--gray);font-size:0.82rem;line-height:1.6;font-weight:300;margin-bottom:1.5rem;min-height:48px}
-    .plan-divider{height:1px;background:var(--border);margin-bottom:1.5rem}
-    .plan-features{list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:2rem;flex:1}
-    .plan-features li{display:flex;align-items:flex-start;gap:8px;font-size:0.83rem;color:var(--gray);line-height:1.4}
-    .plan-features li::before{content:'✓';color:var(--blue);font-weight:700;font-size:0.8rem;flex-shrink:0;margin-top:1px}
-    .plan-client{margin-bottom:1.5rem;padding:10px 14px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;font-size:0.75rem;color:var(--gray)}
-    .plan-client strong{color:var(--white);display:block;margin-bottom:2px}
-    .plan-cta{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--surface2);border:1px solid var(--border);color:var(--white);text-decoration:none;padding:0.85rem;border-radius:10px;font-size:0.85rem;font-weight:600;transition:all 0.2s;text-align:center}
-    .plan-cta:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-1px)}
-    .plan-card.featured .plan-cta{background:var(--blue);border-color:var(--blue)}
-    .plan-card.featured .plan-cta:hover{opacity:0.85}
-    .plan-delivery{font-size:0.72rem;color:var(--gray2);text-align:center;margin-top:0.75rem}
-
-    /* CALENDARIO */
-    #calendario{padding-top:0}
-    .cal-wrap{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:3rem;text-align:center}
-    .cal-wrap h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:0.75rem}
-    .cal-wrap p{color:var(--gray);font-size:0.95rem;max-width:500px;margin:0 auto 2rem;line-height:1.7}
-    .cal-embed{border-radius:16px;overflow:hidden;border:1px solid var(--border)}
-
-    /* SATURNO MOBILE */
-    .saturn-hero{display:none;justify-content:center;align-items:center;margin:2rem auto 0}
-    
-    /* KIT MARCA THUMBNAIL */
-    .kit-thumb{width:100%;max-width:100%;border-radius:12px;border:1px solid var(--border);display:block;margin:1.5rem 0}
-
-    /* RESPONSIVE */
-    @media(max-width:900px){
-      .hero-inner{grid-template-columns:1fr;gap:2rem}
-      .hero-mockup{display:none}
-      .services-grid{grid-template-columns:1fr}
-      .proceso-steps{grid-template-columns:1fr}
-      .entregables-grid{grid-template-columns:1fr 1fr}
-      .planes-grid{grid-template-columns:1fr}
-      .terraza-showcase{grid-template-columns:1fr}
-      .terraza-brand{border-right:none;border-bottom:1px solid var(--border)}
-      .why-grid{grid-template-columns:1fr}
-      .nav-links{display:none}
-      .nav-phone{display:none!important}
-      .nav-mobile-btn{display:flex}
-      .cta-box{padding:3rem 2rem}
-      footer{flex-direction:column;align-items:flex-start}
-      .wa-float{bottom:20px;right:20px}
-      .cal-wrap{padding:2rem 1.25rem}
-      .diag-banner{gap:8px}
-    }
-    @media(max-width:600px){
-      .entregables-grid{grid-template-columns:1fr}
-      .nav-phone{display:none}
+      --radio:14px;            /* un solo radio en todo el sitio */
+      --ancho:1160px;
+      --nav-h:64px;
     }
 
-    @media(min-width:1400px){
-      .hero-inner{max-width:1400px}
-      section{max-width:1400px}
-      #contacto{max-width:1400px}
-      h1{font-size:clamp(4rem,4.5vw,6.5rem)}
-      .hero-sub{font-size:1.15rem;max-width:560px}
-      .services-grid{grid-template-columns:repeat(3,1fr)}
-      .planes-grid{grid-template-columns:repeat(3,1fr)}
-      .proceso-steps{grid-template-columns:repeat(3,1fr)}
-      .why-grid{grid-template-columns:repeat(2,1fr)}
-      nav{padding:0 6%}
-      #hero{padding:160px 6% 100px}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 48px)}
+    body{
+      background:var(--negro);
+      color:var(--blanco);
+      font-family:var(--cuerpo);
+      font-size:var(--t-cuerpo);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
     }
-    @media(min-width:1800px){
-      .hero-inner{max-width:1600px}
-      section{max-width:1600px}
-      #contacto{max-width:1600px}
-      h1{font-size:7rem}
-      nav{padding:0 8%}
-      #hero{padding:180px 8% 120px}
+    img{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+
+    h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-.01em}
+    h1{font-size:var(--t-h1);font-weight:800}
+    h2{font-size:var(--t-h2);font-weight:700}
+    h3{font-size:var(--t-h3);font-weight:700}
+    .caption{font-size:var(--t-caption);color:var(--gris-2)}
+    .acento{color:var(--azul)}
+
+    .contenedor{width:min(var(--ancho), 100% - var(--s-4));margin-inline:auto}
+    section{padding-block:clamp(56px, 5vw + 32px, 112px);position:relative}
+
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:var(--s-1);
+      font-size:var(--t-caption);font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+      color:var(--azul);margin-bottom:var(--s-3);
+    }
+    .eyebrow::before{content:"";width:24px;height:2px;background:var(--azul)}
+
+    /* ============ EL CRISTAL ============ */
+    #cristal{
+      position:fixed;inset:0;z-index:0;pointer-events:none;
+      opacity:.85;
+    }
+    .contenido{position:relative;z-index:1}
+
+    /* ============ BOTONES — 2 niveles ============ */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:var(--s-1);
+      min-height:48px;padding:12px 26px;border-radius:var(--radio);
+      font-family:var(--cuerpo);font-size:1rem;font-weight:600;line-height:1.2;
+      cursor:pointer;border:none;transition:background-color .18s ease, border-color .18s ease, transform .12s ease;
+      text-align:center;
+    }
+    .btn svg{flex:none}
+    .btn-primario{background:var(--azul);color:var(--blanco)}
+    .btn-primario:hover{background:#5593F8}
+    .btn-primario:active{background:var(--azul-press);transform:translateY(1px)}
+    .btn-secundario{background:transparent;color:var(--blanco);border:1.5px solid rgba(255,255,255,.22)}
+    .btn-secundario:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.04)}
+    .btn-secundario:active{border-color:var(--blanco);transform:translateY(1px)}
+    :focus-visible{outline:2px solid var(--azul);outline-offset:3px;border-radius:4px}
+
+    /* ============ 1. BARRA DE CONFIANZA ============ */
+    .barra-confianza{
+      background:var(--sup-1);border-bottom:1px solid var(--linea);
+      font-size:var(--t-caption);color:var(--gris-1);
+      position:relative;z-index:50;
+    }
+    .barra-confianza .contenedor{
+      display:flex;justify-content:space-between;align-items:center;
+      min-height:36px;gap:var(--s-2);
+    }
+    .barra-confianza a, .barra-confianza span{
+      display:inline-flex;align-items:center;gap:6px;min-height:36px;padding-block:4px;
+    }
+    .barra-confianza svg{color:var(--azul)}
+    .barra-confianza a:hover{color:var(--blanco)}
+
+    /* ============ 2. NAVBAR ============ */
+    .navbar{
+      position:sticky;top:0;z-index:40;
+      background:rgba(11,11,11,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--linea);
+    }
+    .navbar .contenedor{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:var(--s-2)}
+    .marca{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:1.05rem;letter-spacing:.02em;min-height:44px}
+    .marca img{width:38px;height:38px}
+    .nav-links{display:none;align-items:center;gap:var(--s-4)}
+    .nav-links a{color:var(--gris-1);font-weight:500;font-size:.95rem;padding:10px 2px;min-height:44px;display:inline-flex;align-items:center}
+    .nav-links a:hover{color:var(--blanco)}
+    .nav-cta{display:none}
+    .hamburguesa{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:44px;height:44px;background:transparent;border:none;color:var(--blanco);cursor:pointer;border-radius:var(--radio);
+    }
+    .nav-cta-movil{min-height:44px;padding:10px 16px;font-size:.9rem}
+    .acciones-nav{display:flex;align-items:center;gap:var(--s-2)}
+
+    .menu-movil{
+      display:none;position:fixed;inset:calc(var(--nav-h) + 37px) 0 0 0;z-index:39;
+      background:rgba(11,11,11,.97);padding:var(--s-4);
+    }
+    .menu-movil.abierto{display:block}
+    .menu-movil a{
+      display:flex;align-items:center;min-height:56px;
+      font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--blanco);
+      border-bottom:1px solid var(--linea);
+    }
+    @media (min-width:900px){
+      .nav-links{display:flex}
+      .nav-cta{display:inline-flex}
+      .hamburguesa,.nav-cta-movil{display:none}
     }
 
-    @media(min-width:601px) and (max-width:900px){
-      .planes-grid{grid-template-columns:repeat(2,1fr)}
-      .services-grid{grid-template-columns:repeat(2,1fr)}
-      .entregables-grid{grid-template-columns:repeat(2,1fr)}
-      .why-grid{grid-template-columns:repeat(2,1fr)}
-      .proceso-steps{grid-template-columns:repeat(2,1fr)}
-      .nav-phone{display:flex}
-      .kit-thumb{max-width:100%}
-      .terraza-showcase{grid-template-columns:1fr}
-      .terraza-brand{border-right:none;border-bottom:1px solid var(--border)}
-      .hero-inner{grid-template-columns:1fr;gap:2rem}
-      .hero-mockup{display:none}
-      h1{font-size:clamp(3rem,6vw,5rem)}
-      .cal-wrap{padding:2.5rem 2rem}
+    /* ============ 3. HERO ============ */
+    .hero{padding-block:clamp(72px, 10vw, 150px) clamp(64px, 8vw, 120px)}
+    .hero h1{max-width:13ch}
+    .hero p{
+      max-width:46ch;color:var(--gris-1);margin-top:var(--s-3);
+    }
+    .hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-top:var(--s-6)}
+    .hero .caption{display:block;margin-top:var(--s-3)}
+
+    /* ============ 4. EL PROBLEMA ============ */
+    .problema{background:var(--sup-1);border-block:1px solid var(--linea)}
+    .sintomas{display:grid;gap:var(--s-2);margin-top:var(--s-6)}
+    .sintoma{
+      background:var(--sup-2);border:1px solid var(--linea);border-radius:var(--radio);
+      padding:var(--s-3) var(--s-4);display:flex;gap:var(--s-2);align-items:flex-start;
+    }
+    .sintoma svg{flex:none;color:var(--azul);margin-top:3px}
+    .sintoma p{color:var(--gris-1)}
+    .sintoma strong{color:var(--blanco);font-weight:600}
+    /* romper la simetría: sangrados alternados en desktop */
+    @media (min-width:900px){
+      .sintomas{max-width:880px}
+      .sintoma:nth-child(2){margin-left:var(--s-8)}
+      .sintoma:nth-child(3){margin-left:var(--s-3)}
+      .sintoma:nth-child(4){margin-left:calc(var(--s-8) + var(--s-6))}
+    }
+    .problema-cierre{margin-top:var(--s-6);max-width:52ch;color:var(--gris-1)}
+    .problema-cierre strong{color:var(--blanco)}
+
+    /* ============ 5. SERVICIOS ============ */
+    .grid-servicios{display:grid;gap:var(--s-3);margin-top:var(--s-6)}
+    @media (min-width:768px){.grid-servicios{grid-template-columns:repeat(3,1fr)}}
+    .servicio{
+      background:var(--sup-2);border:1px solid var(--linea);border-radius:var(--radio);
+      padding:var(--s-4);display:flex;flex-direction:column;gap:var(--s-2);
+    }
+    .icono-caja{
+      width:48px;height:48px;border-radius:var(--radio);
+      background:rgba(59,130,246,.12);display:flex;align-items:center;justify-content:center;color:var(--azul);
+    }
+    .servicio p{color:var(--gris-1);font-size:.97rem}
+
+    /* ============ 6. PLANES ============ */
+    .planes{background:var(--sup-1);border-block:1px solid var(--linea)}
+    .grid-planes{display:grid;gap:var(--s-3);margin-top:var(--s-6);align-items:stretch}
+    @media (min-width:768px){.grid-planes{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:1100px){.grid-planes{grid-template-columns:repeat(4,1fr)}}
+    .plan{
+      background:var(--sup-2);border:1px solid var(--linea);border-radius:var(--radio);
+      padding:var(--s-4);display:flex;flex-direction:column;gap:var(--s-2);position:relative;
+    }
+    .plan h3{font-size:1.25rem}
+    .plan .ideal{color:var(--gris-2);font-size:var(--t-caption);min-height:2.6em}
+    .plan ul{display:flex;flex-direction:column;gap:10px;margin-block:var(--s-2);flex:1}
+    .plan li{display:flex;gap:10px;align-items:flex-start;color:var(--gris-1);font-size:.94rem;line-height:1.45}
+    .plan li svg{flex:none;color:var(--azul);margin-top:3px}
+    .plan li strong{color:var(--blanco);font-weight:600}
+    .plan .nota{font-size:var(--t-caption);color:var(--gris-2);margin-top:calc(var(--s-1) * -1)}
+    .plan .btn{width:100%}
+    .plan-destacado{
+      background:var(--sup-3);border-color:rgba(59,130,246,.55);
+      box-shadow:0 0 0 1px rgba(59,130,246,.35);
+    }
+    @media (min-width:1100px){
+      .plan-destacado{transform:scale(1.035)}
+    }
+    .etiqueta{
+      position:absolute;top:calc(var(--s-2) * -1);left:var(--s-4);
+      background:var(--azul);color:var(--blanco);
+      font-size:.78rem;font-weight:600;letter-spacing:.04em;
+      padding:5px 12px;border-radius:var(--radio);
+    }
+
+    /* ============ 7. PROCESO ============ */
+    .grid-proceso{display:grid;gap:var(--s-3);margin-top:var(--s-6);counter-reset:paso}
+    @media (min-width:768px){.grid-proceso{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:1100px){.grid-proceso{grid-template-columns:repeat(3,1fr)}}
+    .paso{
+      counter-increment:paso;
+      background:var(--sup-2);border:1px solid var(--linea);border-radius:var(--radio);
+      padding:var(--s-4);
+    }
+    .paso::before{
+      content:counter(paso, decimal-leading-zero);
+      font-family:var(--display);font-weight:800;font-size:2rem;color:var(--azul);
+      display:block;margin-bottom:var(--s-2);line-height:1;
+    }
+    .paso p{color:var(--gris-1);font-size:.95rem;margin-top:var(--s-1)}
+
+    /* ============ 8. PROYECTOS ============ */
+    .carrusel-cabecera{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s-3);flex-wrap:wrap}
+    .controles{display:flex;gap:var(--s-2)}
+    .control{
+      width:48px;height:48px;border-radius:var(--radio);
+      background:transparent;border:1.5px solid rgba(255,255,255,.22);color:var(--blanco);
+      display:flex;align-items:center;justify-content:center;cursor:pointer;
+      transition:border-color .18s ease,background-color .18s ease;
+    }
+    .control:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.04)}
+    .control:active{transform:translateY(1px)}
+    .carrusel{
+      display:flex;gap:var(--s-3);margin-top:var(--s-6);
+      overflow-x:auto;scroll-snap-type:x mandatory;
+      padding-bottom:var(--s-2);
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:thin;scrollbar-color:var(--sup-3) transparent;
+    }
+    .slide{
+      flex:0 0 min(86%, 720px);scroll-snap-align:start;
+      background:var(--sup-2);border:1px solid var(--linea);border-radius:var(--radio);overflow:hidden;
+    }
+    .slide img{width:100%;aspect-ratio:3/2;object-fit:cover}
+    .slide-info{padding:var(--s-3) var(--s-4);display:flex;justify-content:space-between;align-items:center;gap:var(--s-2)}
+    .slide-info .caption{margin-top:2px}
+
+    /* ============ 9. POR QUÉ VITRINA ============ */
+    .porque{background:var(--sup-1);border-block:1px solid var(--linea)}
+    .grid-porque{display:grid;gap:var(--s-3);margin-top:var(--s-6)}
+    @media (min-width:768px){.grid-porque{grid-template-columns:repeat(2,1fr)}}
+    .razon{display:flex;gap:var(--s-3);align-items:flex-start}
+    .razon p{color:var(--gris-1);font-size:.97rem;margin-top:6px}
+
+    /* ============ 10. SESIÓN ============ */
+    .sesion-caja{
+      background:var(--sup-2);border:1px solid rgba(59,130,246,.4);border-radius:var(--radio);
+      padding:clamp(var(--s-4), 5vw, var(--s-8));
+      display:grid;gap:var(--s-4);
+    }
+    @media (min-width:900px){.sesion-caja{grid-template-columns:1.4fr 1fr;align-items:center}}
+    .sesion-caja h2{max-width:18ch}
+    .sesion-caja .lista-sesion{display:flex;flex-direction:column;gap:12px;margin-top:var(--s-3)}
+    .sesion-caja .lista-sesion li{display:flex;gap:10px;align-items:flex-start;color:var(--gris-1)}
+    .sesion-caja .lista-sesion svg{flex:none;color:var(--azul);margin-top:4px}
+    .sesion-accion{display:flex;flex-direction:column;gap:var(--s-2)}
+    .sesion-accion .caption{text-align:center}
+
+    /* ============ 11. FIRMA GIGANTE ============ */
+    .firma{padding-block:clamp(40px,6vw,96px) 0;overflow:hidden}
+    .firma-palabra{
+      font-family:var(--display);font-weight:800;
+      font-size:clamp(64px, 17.5vw, 252px);
+      line-height:.85;letter-spacing:-.02em;text-align:center;
+      background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.18));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      user-select:none;
+      transform:translateY(8%);
+    }
+
+    /* ============ 12. FOOTER ============ */
+    footer{
+      background:var(--sup-1);border-top:1px solid var(--linea);
+      padding-block:var(--s-8) var(--s-4);position:relative;z-index:1;
+    }
+    .grid-footer{display:grid;gap:var(--s-6)}
+    @media (min-width:768px){.grid-footer{grid-template-columns:1.5fr 1fr 1fr}}
+    .footer-marca{display:flex;flex-direction:column;gap:var(--s-2);align-items:flex-start}
+    .footer-marca img{width:44px;height:44px}
+    .footer-marca p{color:var(--gris-2);font-size:var(--t-caption);max-width:30ch}
+    footer h3{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gris-2);font-family:var(--cuerpo);font-weight:600;margin-bottom:var(--s-2)}
+    .footer-links{display:flex;flex-direction:column;gap:6px}
+    .footer-links a{color:var(--gris-1);min-height:38px;display:inline-flex;align-items:center;gap:8px}
+    .footer-links a:hover{color:var(--blanco)}
+    .footer-links svg{color:var(--azul)}
+    .legal{
+      margin-top:var(--s-8);padding-top:var(--s-3);border-top:1px solid var(--linea);
+      display:flex;justify-content:space-between;gap:var(--s-2);flex-wrap:wrap;
+      color:var(--gris-2);font-size:var(--t-caption);
+    }
+
+    /* ============ REVEAL ============ */
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.visible{opacity:1;transform:none}
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .reveal{opacity:1;transform:none;transition:none}
+      #cristal{display:none}
+      *{transition:none !important}
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Vitrina Studio",
-  "description": "Estudio digital especializado en diseño web, branding y presencia digital para negocios locales.",
-  "url": "https://vitrina-studio.com/",
-  "logo": "https://vitrina-studio.com/assets/logo.png",
-  "image": "https://vitrina-studio.com/assets/og-image.png",
-  "telephone": "+51904113558",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Lima",
-    "addressCountry": "PE"
-  },
-  "areaServed": {"@type": "City", "name": "Lima"},
-  "priceRange": "$$",
-  "sameAs": []
-}
-</script>
 </head>
 <body>
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- WA FLOTANTE -->
-  <div class="wa-float">
-    <span class="wa-tooltip">¡Escríbenos ahora!</span>
-    <a href="https://wa.me/51904113558?text=Hola%2C%20vi%20su%20trabajo%20en%20Vitrina%20Studio%20y%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20y%20presencia%20digital%20para%20mi%20negocio." target="_blank" aria-label="WhatsApp">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.524 5.863L.057 23.504a.5.5 0 0 0 .61.61l5.675-1.467A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.528-5.178-1.445l-.372-.221-3.851.995.996-3.826-.241-.393A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-    </a>
+<canvas id="cristal" aria-hidden="true"></canvas>
+
+<div class="contenido">
+
+  <!-- 1. BARRA DE CONFIANZA -->
+  <div class="barra-confianza">
+    <div class="contenedor">
+      <span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Lima, Perú
+      </span>
+      <a href="https://wa.me/51904113558?text=Hola%20Vitrina%20Studio%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        +51 904 113 558
+      </a>
+    </div>
   </div>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">
-      <img src="/assets/logo.png" width="80" height="80" alt="Vitrina Studio"/>
-      <div class="nav-logo-text">VITRINA<span>S T U D I O</span></div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#planes">Planes</a></li>
-      <li><a href="#proceso">Proceso</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#por-que">Nosotros</a></li>
-    </ul>
-    <div class="nav-right">
-      <a href="tel:+51904113558" class="nav-phone">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        904 113 558
+  <!-- 2. NAVBAR -->
+  <nav class="navbar">
+    <div class="contenedor">
+      <a class="marca" href="#inicio" aria-label="Vitrina Studio — inicio">
+        <img src="/assets/logo-nav.webp" alt="Logo de Vitrina Studio" width="38" height="38">
+        VITRINA STUDIO
       </a>
-      <a href="https://wa.me/51904113558?text=Hola%2C%20vi%20su%20trabajo%20en%20Vitrina%20Studio%20y%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20y%20presencia%20digital%20para%20mi%20negocio." target="_blank" class="nav-cta">Hablemos</a>
+      <div class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#planes">Planes</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#proyectos">Proyectos</a>
+      </div>
+      <div class="acciones-nav">
+        <a class="btn btn-primario nav-cta" href="#sesion">Agenda tu sesión</a>
+        <a class="btn btn-primario nav-cta-movil" href="#sesion">Agenda tu sesión</a>
+        <button class="hamburguesa" id="btnMenu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuMovil">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+      </div>
     </div>
-    <button class="nav-mobile-btn" id="hamburgerBtn" onclick="toggleMenu()">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
   </nav>
 
-  <!-- MOBILE OVERLAY -->
-  <div class="mobile-menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
-  <div class="mobile-menu-panel" id="mobileMenu">
-    <div class="mob-menu-header">
-      <div class="mob-menu-logo">
-        <img src="/assets/logo.png" width="80" height="80" alt="Vitrina Studio"/>
-        <span class="mob-menu-logo-text">VITRINA STUDIO</span>
-      </div>
-      <button class="mob-menu-close" onclick="toggleMenu()">✕</button>
-    </div>
-    <div class="mob-menu-nav">
-      <div class="mob-menu-label">Navegación</div>
-      <a href="#servicios" class="mob-nav-link" onclick="toggleMenu()">Servicios <span>↗</span></a>
-      <a href="#planes" class="mob-nav-link" onclick="toggleMenu()">Planes <span>↗</span></a>
-      <a href="#proceso" class="mob-nav-link" onclick="toggleMenu()">Proceso <span>↗</span></a>
-      <a href="#proyectos" class="mob-nav-link" onclick="toggleMenu()">Proyectos <span>↗</span></a>
-      <a href="#por-que" class="mob-nav-link" onclick="toggleMenu()">Nosotros <span>↗</span></a>
-      <a href="#calendario" class="mob-nav-link" onclick="toggleMenu()">Agenda gratuita <span>↗</span></a>
-    </div>
-    <div class="mob-menu-footer">
-      <a href="https://wa.me/51904113558?text=Hola%2C%20vi%20su%20trabajo%20en%20Vitrina%20Studio%20y%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20y%20presencia%20digital%20para%20mi%20negocio." target="_blank" class="mob-cta-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.524 5.863L.057 23.504a.5.5 0 0 0 .61.61l5.675-1.467A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.528-5.178-1.445l-.372-.221-3.851.995.996-3.826-.241-.393A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-        Hablemos por WhatsApp
-      </a>
-      <div class="mob-social-row">
-        <a href="https://www.instagram.com/somosvitrina.pe" target="_blank" class="mob-social-link">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Instagram
-        </a>
-        <a href="https://www.tiktok.com/@somos.vitrina" target="_blank" class="mob-social-link">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34l-.03-8.54a8.2 8.2 0 0 0 4.79 1.52V4.84a4.85 4.85 0 0 1-1-.15z"/></svg>TikTok
-        </a>
-      </div>
-    </div>
+  <div class="menu-movil" id="menuMovil">
+    <a href="#servicios">Servicios</a>
+    <a href="#planes">Planes</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#sesion" class="acento">Agenda tu sesión</a>
   </div>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg-glow"></div>
-    <div class="hero-bg-glow2"></div>
-    <canvas id="particles-canvas"></canvas>
-    <div class="hero-inner">
-      <div class="hero-content">
-        <div class="hero-badge">Estudio Digital · Lima, Perú</div>
-        <h1>Haz que tu <span class="accent">marca</span> destaque.</h1>
-        <p class="hero-sub">Diseño web, branding y presencia digital para negocios que quieren verse modernos y profesionales en internet.</p>
-        <div class="hero-btns">
-          <a href="https://wa.me/51904113558?text=Hola%2C%20vi%20su%20trabajo%20en%20Vitrina%20Studio%20y%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20y%20presencia%20digital%20para%20mi%20negocio." target="_blank" class="btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.524 5.863L.057 23.504a.5.5 0 0 0 .61.61l5.675-1.467A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.528-5.178-1.445l-.372-.221-3.851.995.996-3.826-.241-.393A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-            Escríbenos
-          </a>
-          <a href="#proceso" class="btn-ghost">Nuestro proceso →</a>
-        </div>
-        <div class="scroll-ind"><div class="scroll-line"></div>Scroll para explorar</div>
-      </div>
-      <div class="hero-mockup">
-        <div class="float-el fe1">
-          <div class="float-card"><div class="fc-icon fc-blue">✦</div><div class="fc-text"><strong>Diseño Premium</strong><span>Cada pixel importa</span></div></div>
-        </div>
-        <div class="mockup-browser">
-          <div class="browser-bar">
-            <div class="browser-dots"><div class="browser-dot d1"></div><div class="browser-dot d2"></div><div class="browser-dot d3"></div></div>
-            <div class="browser-url">vitrinastudio.com</div>
-          </div>
-          <div class="browser-content">
-            <div class="mini-nav"><div class="mini-logo-bar"><span class="ml1"></span><span class="ml2"></span></div><div class="mini-nav-links"><span></span><span></span><span></span></div></div>
-            <div class="mini-h1"></div><div class="mini-h1b"></div>
-            <div class="mini-p"></div><div class="mini-p"></div><div class="mini-p"></div>
-            <div class="mini-btns"><div class="mini-btn mb1"></div><div class="mini-btn mb2"></div></div>
-            <div class="mini-cards"><div class="mini-card"><div class="mini-card-icon"></div><div class="mini-card-line"></div><div class="mini-card-line"></div></div><div class="mini-card"><div class="mini-card-icon"></div><div class="mini-card-line"></div><div class="mini-card-line"></div></div><div class="mini-card"><div class="mini-card-icon"></div><div class="mini-card-line"></div><div class="mini-card-line"></div></div></div>
-          </div>
-        </div>
-        <div class="float-el fe2">
-          <div class="float-card"><div class="fc-icon fc-blue">🚀</div><div class="fc-text"><strong>Lanzamiento listo</strong><span>Optimizado y veloz</span></div></div>
-        </div>
-      </div>
+  <!-- 3. HERO -->
+  <header class="hero contenedor" id="inicio">
+    <h1>Haz que tu marca <span class="acento">destaque</span></h1>
+    <p>Diseñamos webs y marcas que convierten visitas en clientes para restaurantes, tiendas y emprendedores de Lima. Que tu negocio se vea tan bien online como lo es en persona.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primario" href="#sesion">Agenda tu sesión gratuita</a>
+      <a class="btn btn-secundario" href="#proyectos">Ver proyectos</a>
+    </div>
+    <span class="caption">30 minutos por videollamada · Sin costo · Sin compromiso</span>
+  </header>
 
+  <!-- 4. EL PROBLEMA -->
+  <section class="problema" id="problema">
+    <div class="contenedor">
+      <span class="eyebrow">¿Te suena familiar?</span>
+      <h2 class="reveal">Tu negocio es bueno.<br>Online, nadie lo nota.</h2>
+      <div class="sintomas">
+        <div class="sintoma reveal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <p><strong>Tu carta es un PDF borroso</strong> que mandas por WhatsApp y nadie puede leer desde el celular.</p>
+        </div>
+        <div class="sintoma reveal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+          <p><strong>Tu local se ve increíble</strong>, pero tu Instagram no lo cuenta y tus fotos no le hacen justicia.</p>
+        </div>
+        <div class="sintoma reveal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <p><strong>Te buscan en Google</strong> y apareces después de todos tus competidores… si apareces.</p>
+        </div>
+        <div class="sintoma reveal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <p><strong>Tienes un buen negocio</strong>, pero online pareces improvisado y eso te cuesta clientes todos los días.</p>
+        </div>
+      </div>
+      <p class="problema-cierre reveal">Nada de esto se arregla con "publicar más". Se arregla con una base bien hecha: <strong>los planes de abajo existen exactamente para eso.</strong></p>
     </div>
   </section>
 
-  <!-- BANNER DIAGNÓSTICO -->
-  <section style="padding:0">
-    <div style="background:linear-gradient(90deg,rgba(59,130,246,0.12),rgba(59,130,246,0.06),rgba(59,130,246,0.12));border-top:1px solid rgba(59,130,246,0.15);border-bottom:1px solid rgba(59,130,246,0.15);padding:1.5rem 5%;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;text-align:center">
-      <p style="font-size:0.95rem;color:var(--white);font-weight:400">¿Tu negocio necesita presencia digital? <strong style="color:var(--blue)">Agenda una sesión estratégica gratuita</strong> y descubre exactamente qué necesitas.</p>
-      <a href="https://cal.com/somos-vitrina-ssmui4" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:var(--white);text-decoration:none;padding:10px 20px;border-radius:100px;font-size:0.85rem;font-weight:600;transition:all 0.2s;white-space:nowrap">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Agenda diagnóstico GRATIS
-      </a>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- SERVICIOS -->
+  <!-- 5. SERVICIOS -->
   <section id="servicios">
-    <div class="services-header reveal">
-      <div class="section-label">Lo que hacemos</div>
-      <h2 class="section-title">Servicios diseñados<br/>para destacar.</h2>
-      <p class="section-sub">Cada proyecto es único. Creamos soluciones digitales que comunican, conectan y convierten.</p>
+    <div class="contenedor">
+      <span class="eyebrow">Servicios</span>
+      <h2 class="reveal">Tres áreas, un objetivo:<br>que te elijan a ti</h2>
+      <div class="grid-servicios">
+        <article class="servicio reveal">
+          <div class="icono-caja">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Diseño Web</h3>
+          <p>Sitios estáticos hechos a medida: cargan en segundos, no se caen y no se hackean como un WordPress descuidado. Tu web lista para vender desde el primer día, con SEO técnico incluido.</p>
+        </article>
+        <article class="servicio reveal">
+          <div class="icono-caja">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          </div>
+          <h3>Branding</h3>
+          <p>Logo, paleta de colores y tipografías que cuentan quién eres en un vistazo. Una identidad coherente desde tu fachada hasta tu perfil de Instagram, pensada para el cliente peruano.</p>
+        </article>
+        <article class="servicio reveal">
+          <div class="icono-caja">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Presencia Digital</h3>
+          <p>Que te encuentren y te compren: ficha de Google optimizada, datos estructurados, plantillas para redes y el sistema de pedidos por WhatsApp con carrito que tus clientes van a amar.</p>
+        </article>
+      </div>
     </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M8 8l2 2-2 2M12 12h4"/></svg></div>
-        <h3>Diseño Web</h3>
-        <p>Sitios web modernos, rápidos y optimizados. Diseñados para convertir visitantes en clientes desde el primer segundo.</p>
-        <div class="service-tags"><span class="service-tag">Landing Pages</span><span class="service-tag">E-commerce</span><span class="service-tag">Responsive</span></div>
-      </div>
-      <div class="service-card reveal" style="transition-delay:0.1s">
-        <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-        <h3>Branding</h3>
-        <p>Construimos marcas sólidas que destacan en el mercado. Identidad visual que comunica profesionalismo y confianza.</p>
-        <div class="service-tags"><span class="service-tag">Identidad Visual</span><span class="service-tag">Logo</span><span class="service-tag">Kit de Marca</span></div>
-      </div>
-      <div class="service-card reveal" style="transition-delay:0.2s">
-        <div class="service-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="1.5"><path d="M1.42 9a16 16 0 0 1 21.16 0M5 12.55a11 11 0 0 1 14.08 0M10.54 16.1a6 6 0 0 1 2.92 0M12 20h.01"/></svg></div>
-        <h3>Presencia Digital</h3>
-        <p>Estrategias digitales que generan alcance y resultados reales. Tu negocio visible donde están tus clientes.</p>
-        <div class="service-tags"><span class="service-tag">Redes Sociales</span><span class="service-tag">Contenido</span><span class="service-tag">Estrategia</span></div>
+  </section>
+
+  <!-- 6. PLANES -->
+  <section class="planes" id="planes">
+    <div class="contenedor">
+      <span class="eyebrow">Planes</span>
+      <h2 class="reveal">Elige tu punto de partida</h2>
+      <p class="problema-cierre reveal" style="margin-top:var(--s-3)">Cada negocio es distinto, así que los precios se conversan en tu sesión gratuita. Sin sorpresas y sin letra chica.</p>
+
+      <div class="grid-planes">
+
+        <article class="plan reveal">
+          <h3>Presencia Básica</h3>
+          <p class="ideal">Ideal para: emprendedores, servicios locales y proyectos personales.</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Landing de 1 página, diseñada a medida y responsive</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Botón de WhatsApp directo a tu chat</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>SEO base para aparecer en Google</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Dominio y hosting gratis el primer año</strong></span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>1 ronda de cambios incluida</span></li>
+          </ul>
+          <a class="btn btn-secundario" href="#sesion">Cotiza en tu sesión gratuita</a>
+        </article>
+
+        <article class="plan plan-destacado reveal">
+          <span class="etiqueta">La más elegida</span>
+          <h3>Identidad Completa</h3>
+          <p class="ideal">Ideal para: restaurantes, cafeterías y tiendas que arrancan o se renuevan.</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Todo lo de Presencia Básica</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Web de hasta 4 secciones</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Kit de marca: logo, paleta y tipografías</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Sistema de pedidos por WhatsApp con carrito</strong></span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Datos estructurados para Google</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Plantillas para redes sociales</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>2 rondas de cambios incluidas</span></li>
+          </ul>
+          <a class="btn btn-primario" href="#sesion">Cotiza en tu sesión gratuita</a>
+        </article>
+
+        <article class="plan reveal">
+          <h3>Marca Profesional</h3>
+          <p class="ideal">Ideal para: negocios establecidos que quieren jugar en otra liga.</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Todo lo de Identidad Completa</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Web de hasta 7 secciones</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Kit de marca extendido</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Kit de lanzamiento en redes</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Email corporativo con tu dominio</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Reporte de resultados a 30 días</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>3 rondas de cambios incluidas</span></li>
+          </ul>
+          <a class="btn btn-secundario" href="#sesion">Cotiza en tu sesión gratuita</a>
+        </article>
+
+        <article class="plan reveal">
+          <h3>Tienda Virtual</h3>
+          <p class="ideal">Ideal para: negocios que venden productos online.</p>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Tienda en Shopify o WooCommerce</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Catálogo de productos cargado y organizado</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Pagos online configurados</span></li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Capacitación para que la manejes tú</span></li>
+          </ul>
+          <p class="nota">La mensualidad de la plataforma y las comisiones de pago las paga el cliente.</p>
+          <a class="btn btn-secundario" href="#sesion">Cotiza en tu sesión gratuita</a>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- PLANES -->
-  <section id="planes">
-    <div class="planes-header reveal">
-      <div class="section-label">Nuestros planes</div>
-      <h2 class="section-title">Planes que se adaptan<br/>a tu negocio.</h2>
-      <p class="section-sub">Estos son nuestros planes de referencia. Siempre adaptamos la propuesta a las necesidades de cada proyecto.</p>
-    </div>
-    <div class="planes-grid">
-
-      <!-- PLAN 1 -->
-      <div class="plan-card reveal">
-        <div class="plan-name">Presencia Básica</div>
-        <div class="plan-desc">Para negocios que recién dan el primer paso digital. Rápido, profesional y efectivo.</div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li>Landing page de 1 página</li>
-          <li>Diseño responsive (celular, tablet, PC)</li>
-          <li>Botón de WhatsApp flotante</li>
-          <li>Formulario de contacto</li>
-          <li>Dominio .com incluido 1er año</li>
-          <li>Hosting incluido 1er año</li>
-          <li>Entrega en 7 días</li>
-        </ul>
-        <div class="plan-client"><strong>Ideal para:</strong> Restaurantes, tiendas, servicios locales que necesitan presencia digital rápida.</div>
-        <a href="https://wa.me/51904113558?text=Hola%2C%20me%20interesa%20el%20Plan%20Presencia%20B%C3%A1sica%20de%20Vitrina%20Studio." target="_blank" class="plan-cta">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.524 5.863L.057 23.504a.5.5 0 0 0 .61.61l5.675-1.467A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.528-5.178-1.445l-.372-.221-3.851.995.996-3.826-.241-.393A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-          Quiero este plan
-        </a>
-        <div class="plan-delivery">⏱ Entrega estimada: 7 días</div>
-      </div>
-
-      <!-- PLAN 2 - MÁS POPULAR -->
-      <div class="plan-card featured reveal" style="transition-delay:0.1s">
-        <div class="plan-badge">✦ Más solicitado</div>
-        <div class="plan-name">Identidad Completa</div>
-        <div class="plan-desc">Web profesional + identidad visual. Todo lo que tu negocio necesita para verse serio desde el primer día.</div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li>Web de hasta 4 páginas</li>
-          <li>Diseño responsive completo</li>
-          <li>Branding + Kit de marca completo</li>
-          <li>Paleta de colores y tipografías</li>
-          <li>Logo principal y versiones</li>
-          <li>Botón WhatsApp + formularios</li>
-          <li>Dominio .com incluido 1er año</li>
-          <li>Hosting incluido 1er año</li>
-          <li>Entrega en 15 días</li>
-        </ul>
-        <div class="plan-client"><strong>Ideal para:</strong> Negocios que quieren lanzarse con identidad sólida y web profesional al mismo tiempo.</div>
-        <a href="https://wa.me/51904113558?text=Hola%2C%20me%20interesa%20el%20Plan%20Identidad%20Completa%20de%20Vitrina%20Studio." target="_blank" class="plan-cta">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.524 5.863L.057 23.504a.5.5 0 0 0 .61.61l5.675-1.467A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.528-5.178-1.445l-.372-.221-3.851.995.996-3.826-.241-.393A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-          Quiero este plan
-        </a>
-        <div class="plan-delivery">⏱ Entrega estimada: 15 días</div>
-      </div>
-
-      <!-- PLAN 3 -->
-      <div class="plan-card reveal" style="transition-delay:0.2s">
-        <div class="plan-name">Marca Profesional</div>
-        <div class="plan-desc">El paquete completo para negocios que quieren destacar en todos los canales digitales.</div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li>Web de hasta 6 páginas</li>
-          <li>Diseño responsive completo</li>
-          <li>Branding + Kit de marca completo</li>
-          <li>Diseño para redes sociales</li>
-          <li>Plantillas de posts e historias</li>
-          <li>Portada y foto de perfil optimizadas</li>
-          <li>Botón WhatsApp + formularios</li>
-          <li>Dominio .com incluido 1er año</li>
-          <li>Hosting incluido 1er año</li>
-          <li>Entrega en 21 días</li>
-        </ul>
-        <div class="plan-client"><strong>Ideal para:</strong> Negocios que quieren coherencia visual en web, redes y todos sus materiales digitales.</div>
-        <a href="https://wa.me/51904113558?text=Hola%2C%20me%20interesa%20el%20Plan%20Marca%20Profesional%20de%20Vitrina%20Studio." target="_blank" class="plan-cta">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.455-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.524 5.863L.057 23.504a.5.5 0 0 0 .61.61l5.675-1.467A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.528-5.178-1.445l-.372-.221-3.851.995.996-3.826-.241-.393A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-          Quiero este plan
-        </a>
-        <div class="plan-delivery">⏱ Entrega estimada: 21 días</div>
-      </div>
-
-    </div>
-    <div class="proceso-cta reveal" style="margin-top:2rem">
-      <p><strong>¿No sabes qué plan necesitas?</strong> Cuéntanos tu proyecto y te orientamos sin compromiso.</p>
-      <a href="https://cal.com/somos-vitrina-ssmui4" target="_blank" class="btn-primary" style="margin:0 auto">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Agenda diagnóstico gratuito
-      </a>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- NUESTRO PROCESO -->
+  <!-- 7. PROCESO -->
   <section id="proceso">
-    <div class="reveal">
-      <div class="section-label">Cómo trabajamos</div>
-      <h2 class="section-title">Nuestro proceso.</h2>
-      <p class="section-sub">Un flujo de trabajo claro, estratégico y enfocado en resultados.</p>
-    </div>
-    <div class="proceso-steps">
-      <div class="paso-card reveal">
-        <div class="paso-num">01</div>
-        <div class="paso-icon">🔍</div>
-        <h4>Descubrimiento</h4>
-        <p>Conocemos tu negocio, objetivos, necesidades y referencias del cliente para entender el proyecto a profundidad.</p>
+    <div class="contenedor">
+      <span class="eyebrow">Proceso</span>
+      <h2 class="reveal">Así trabajamos, paso a paso</h2>
+      <div class="grid-proceso">
+        <div class="paso reveal"><h3>Descubrimiento</h3><p>Conversamos sobre tu negocio, tus clientes y qué quieres lograr. Aquí nace el mini-plan.</p></div>
+        <div class="paso reveal"><h3>Propuesta</h3><p>Te presentamos alcance, plan recomendado y cotización clara. Apruebas antes de empezar.</p></div>
+        <div class="paso reveal"><h3>Diseño</h3><p>Creamos la identidad visual y el diseño de tu web. Lo revisas y opinas en cada avance.</p></div>
+        <div class="paso reveal"><h3>Desarrollo</h3><p>Construimos tu sitio con código limpio, rápido y seguro. Nada de plantillas vulnerables.</p></div>
+        <div class="paso reveal"><h3>Ajustes</h3><p>Aplicamos tus rondas de cambios hasta que todo quede como lo imaginaste.</p></div>
+        <div class="paso reveal"><h3>Lanzamiento</h3><p>Publicamos tu web en tu dominio, conectada a Google y lista para recibir clientes.</p></div>
       </div>
-      <div class="paso-card reveal" style="transition-delay:0.1s">
-        <div class="paso-num">02</div>
-        <div class="paso-icon">📋</div>
-        <h4>Planificación</h4>
-        <p>Definimos la estrategia, estructura, estilo visual y organización de la marca y el proyecto.</p>
-      </div>
-      <div class="paso-card reveal" style="transition-delay:0.2s">
-        <div class="paso-num">03</div>
-        <div class="paso-icon">🎨</div>
-        <h4>Diseño</h4>
-        <p>Creamos una propuesta visual moderna, alineada a la marca y enfocada en una experiencia premium.</p>
-      </div>
-      <div class="paso-card reveal" style="transition-delay:0.1s">
-        <div class="paso-num">04</div>
-        <div class="paso-icon">⚡</div>
-        <h4>Desarrollo</h4>
-        <p>Construimos una web rápida, responsive, optimizada y funcional en todos los dispositivos.</p>
-      </div>
-      <div class="paso-card reveal" style="transition-delay:0.2s">
-        <div class="paso-num">05</div>
-        <div class="paso-icon">🔧</div>
-        <h4>Revisión y ajustes</h4>
-        <p>Revisamos cada detalle junto al cliente y aplicamos las mejoras finales necesarias.</p>
-      </div>
-      <div class="paso-card reveal" style="transition-delay:0.3s">
-        <div class="paso-num">06</div>
-        <div class="paso-icon">🚀</div>
-        <h4>Entrega final</h4>
-        <p>Entregamos el proyecto completo junto con soporte inicial y recursos organizados.</p>
-      </div>
-    </div>
-    <div class="entregables reveal">
-      <h4>¿Qué recibe el cliente?</h4>
-      <div class="entregables-grid">
-        <div class="entregable-item"><div class="ei-icon">🌐</div><div><strong style="font-size:0.85rem">Sitio web completo</strong><br/><span style="font-size:0.78rem;color:var(--gray)">Web funcional, responsive y lista para publicar</span></div></div>
-        <div class="entregable-item"><div class="ei-icon">🔑</div><div><strong style="font-size:0.85rem">Accesos y credenciales</strong><br/><span style="font-size:0.78rem;color:var(--gray)">Dominio, hosting y herramientas utilizadas</span></div></div>
-        <div class="entregable-item"><div class="ei-icon">📖</div><div><strong style="font-size:0.85rem">Guía básica de uso</strong><br/><span style="font-size:0.78rem;color:var(--gray)">Indicaciones simples para administrar la web</span></div></div>
-        <div class="entregable-item"><div class="ei-icon">📁</div><div><strong style="font-size:0.85rem">Archivos y recursos</strong><br/><span style="font-size:0.78rem;color:var(--gray)">Archivos utilizados en el proyecto organizados</span></div></div>
-        <div class="entregable-item"><div class="ei-icon">✦</div><div><strong style="font-size:0.85rem">Kit de marca</strong><br/><span style="font-size:0.78rem;color:var(--gray)">Logo, colores, tipografías y elementos visuales</span></div></div>
-        <div class="entregable-item"><div class="ei-icon">📄</div><div><strong style="font-size:0.85rem">Documento PDF profesional</strong><br/><span style="font-size:0.78rem;color:var(--gray)">Todo el proyecto explicado y organizado</span></div></div>
-      </div>
-    </div>
-    <div class="proceso-cta reveal">
-      <p><strong>No solo entregamos una web.</strong> Creamos una presencia digital profesional.</p>
-      <a href="https://wa.me/51904113558?text=Hola%2C%20vi%20su%20trabajo%20en%20Vitrina%20Studio%20y%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20y%20presencia%20digital%20para%20mi%20negocio." target="_blank" class="btn-primary" style="margin:0 auto">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.524 5.863L.057 23.504a.5.5 0 0 0 .61.61l5.675-1.467A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.528-5.178-1.445l-.372-.221-3.851.995.996-3.826-.241-.393A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-        Solicitar proyecto
-      </a>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <!-- PROYECTOS -->
+  <!-- 8. PROYECTOS -->
   <section id="proyectos">
-    <div class="reveal" style="margin-bottom:3rem">
-      <div class="section-label">Proyectos que hablan por nosotros</div>
-      <h2 class="section-title">Diseños modernos,<br/>funcionales y estratégicos.</h2>
-      <p class="section-sub">Transformando negocios locales en marcas digitales modernas.</p>
-    </div>
-    <div class="project-wrap reveal">
-      <div class="project-header">
+    <div class="contenedor">
+      <div class="carrusel-cabecera">
         <div>
-          <div class="project-badge-en">En desarrollo</div>
-          <h3>La Terraza Norteña</h3>
-          <p>Creación de identidad visual completa y estrategia digital para restaurante de comida norteña en Lima. Branding desde cero.</p>
+          <span class="eyebrow">Proyectos</span>
+          <h2 class="reveal">Negocios que ya destacan</h2>
         </div>
-        <div class="project-chips">
-          <span class="chip">Branding</span>
-          <span class="chip">Identidad Visual</span>
-          <span class="chip">Gastronomía</span>
+        <div class="controles">
+          <button class="control" id="prevSlide" aria-label="Proyecto anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="control" id="nextSlide" aria-label="Proyecto siguiente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </div>
-      <div class="terraza-showcase">
-        <div class="terraza-brand">
-          <div class="section-label" style="margin-bottom:1rem">Kit de Marca</div>
-          <img src="/assets/terraza-kit-marca.webp" loading="lazy" width="1400" height="933" alt="Kit de marca La Terraza Norteña — Presentación parcial" style="width:100%;max-width:100%;border-radius:12px;border:1px solid rgba(255,255,255,0.07);display:block;margin-bottom:1.5rem"/>
-          <div class="section-label" style="margin-bottom:1rem">Identidad de Marca</div>
-          <div class="brand-name">La Terraza Norteña</div>
-          <div class="brand-tagline">"Tradición que se sirve Caliente!!!"</div>
-          <div class="brand-colors" style="margin-top:1rem">
-            <div class="brand-color" style="background:#1E3A2A"><span>#1E3A2A</span></div>
-            <div class="brand-color" style="background:#DAA017"><span>#DAA017</span></div>
-            <div class="brand-color" style="background:#F2E9D4;border:1px solid rgba(255,255,255,0.1)"><span>#F2E9D4</span></div>
-            <div class="brand-color" style="background:#4B2E20"><span>#4B2E20</span></div>
-            <div class="brand-color" style="background:#6F8F3D"><span>#6F8F3D</span></div>
+
+      <div class="carrusel" id="carrusel" tabindex="0" aria-label="Carrusel de proyectos">
+        <article class="slide">
+          <img src="/assets/proyecto-terraza.webp" alt="Web de La Terraza Norteña: carta digital con pedidos por WhatsApp" width="1200" height="800" loading="lazy">
+          <div class="slide-info">
+            <div>
+              <h3>La Terraza Norteña</h3>
+              <span class="caption">Restaurante · Web + kit de marca + carrito de WhatsApp</span>
+            </div>
           </div>
-          <div class="brand-essence" style="margin-top:1.5rem">
-            <span class="brand-tag">Tradición</span>
-            <span class="brand-tag">Sabor norteño</span>
-            <span class="brand-tag">Casero</span>
-            <span class="brand-tag">Familiar</span>
-            <span class="brand-tag">Auténtico</span>
+        </article>
+        <article class="slide">
+          <img src="/assets/proyecto-vitrina.webp" alt="Web de Vitrina Studio: portada con identidad de marca" width="1200" height="800" loading="lazy">
+          <div class="slide-info">
+            <div>
+              <h3>Vitrina Studio</h3>
+              <span class="caption">Estudio digital · Identidad + web propia</span>
+            </div>
+          </div>
+        </article>
+        <article class="slide">
+          <img src="/assets/proyecto-placeholder.webp" alt="Espacio reservado para tu proyecto" width="1200" height="800" loading="lazy">
+          <div class="slide-info">
+            <div>
+              <h3>Tu negocio</h3>
+              <span class="caption">El siguiente proyecto puede ser el tuyo</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. POR QUÉ VITRINA -->
+  <section class="porque">
+    <div class="contenedor">
+      <span class="eyebrow">Por qué Vitrina</span>
+      <h2 class="reveal">Lo que hacemos distinto</h2>
+      <div class="grid-porque">
+        <div class="razon reveal">
+          <div class="icono-caja">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h3>Seguridad y velocidad reales</h3>
+            <p>Construimos sitios estáticos: sin plugins desactualizados ni bases de datos expuestas. Tu web carga en segundos y no amanece hackeada.</p>
           </div>
         </div>
-                <div class="terraza-info">
-          <h4>Trabajo realizado</h4>
-          <div class="trabajo-item">
-            <div class="trabajo-icon">✦</div>
-            <div class="trabajo-text"><strong>Identidad visual completa</strong><span>Logo principal, versiones, isotipo y favicon</span></div>
+        <div class="razon reveal">
+          <div class="icono-caja">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <div class="trabajo-item">
-            <div class="trabajo-icon">🎨</div>
-            <div class="trabajo-text"><strong>Kit de marca</strong><span>Paleta de colores, tipografías y elementos visuales</span></div>
+          <div>
+            <h3>Atención cercana</h3>
+            <p>Hablas directo con quien diseña y construye tu proyecto, por WhatsApp y en tu idioma. Sin tickets, sin intermediarios, sin esperar días por una respuesta.</p>
           </div>
-          <div class="trabajo-item">
-            <div class="trabajo-icon">📱</div>
-            <div class="trabajo-text"><strong>Plantillas para redes sociales</strong><span>Posts, historias y contenido promocional</span></div>
+        </div>
+        <div class="razon reveal">
+          <div class="icono-caja">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </div>
-          <div class="trabajo-item">
-            <div class="trabajo-icon">📦</div>
-            <div class="trabajo-text"><strong>Aplicaciones de marca</strong><span>Packaging, uniformes y material de delivery</span></div>
+          <div>
+            <h3>Entrega rápida</h3>
+            <p>Procesos claros y herramientas modernas: tu web sale en semanas, no en meses. Y sabes en qué paso está tu proyecto en todo momento.</p>
           </div>
-          <div class="terraza-status">
-            <div class="status-dot"></div>
-            <span>Proyecto en desarrollo activo</span>
+        </div>
+        <div class="razon reveal">
+          <div class="icono-caja">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
           </div>
-          <a href="https://laterrazanortena.netlify.app/" target="_blank" class="btn-primary" style="margin-top:1.5rem;width:100%;justify-content:center">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Ver sitio web
-          </a>
+          <div>
+            <h3>El carrito de WhatsApp</h3>
+            <p>Tus clientes arman su pedido en la web y te llega listo a tu WhatsApp. Las agencias grandes no lo ofrecen; nosotros lo creamos para negocios como el tuyo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. SESIÓN ESTRATÉGICA -->
+  <section id="sesion">
+    <div class="contenedor">
+      <div class="sesion-caja reveal">
+        <div>
+          <span class="eyebrow">Sesión estratégica gratuita</span>
+          <h2>30 minutos. Un plan claro para tu negocio.</h2>
+          <ul class="lista-sesion">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Revisamos juntos tu presencia digital actual</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Sales con un <strong style="color:var(--blanco)">mini-plan digital personalizado en PDF</strong>, tuyo te quedes o no</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Te decimos qué plan te conviene y cuánto costaría, sin rodeos</span>
+            </li>
+          </ul>
+        </div>
+        <div class="sesion-accion">
+          <a class="btn btn-primario" href="https://cal.com/somos-vitrina-ssmui4" rel="noopener" target="_blank">Agenda tu sesión gratuita</a>
+          <a class="btn btn-secundario" href="https://wa.me/51904113558?text=Hola%20Vitrina%20Studio%2C%20quiero%20agendar%20mi%20sesi%C3%B3n%20estrat%C3%A9gica%20gratuita." rel="noopener">Prefiero escribir por WhatsApp</a>
+          <span class="caption">Sin ventas. Sin presión. Solo un plan para tu negocio.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="divider"></div>
+  <!-- 11. FIRMA GIGANTE -->
+  <div class="firma" aria-hidden="true">
+    <div class="firma-palabra">VITRINA</div>
+  </div>
 
-  <!-- POR QUÉ -->
-  <section id="por-que">
-    <div class="reveal">
-      <div class="section-label">Por qué elegirnos</div>
-      <h2 class="section-title">Lo que nos hace<br/>diferentes.</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal"><div class="why-icon">🤝</div><div class="why-text"><h4>Trato personalizado</h4><p>No somos una agencia masiva. Trabajamos contigo directamente, entendiendo tu negocio a fondo.</p></div></div>
-      <div class="why-card reveal" style="transition-delay:0.1s"><div class="why-icon">⚡</div><div class="why-text"><h4>Entrega rápida</h4><p>Procesos ágiles y organizados. Cumplimos los tiempos acordados sin sacrificar la calidad.</p></div></div>
-      <div class="why-card reveal" style="transition-delay:0.2s"><div class="why-icon">📦</div><div class="why-text"><h4>Entrega completa</h4><p>No solo diseñamos. Entregamos todo: archivos, accesos, guías y soporte post-lanzamiento.</p></div></div>
-      <div class="why-card reveal" style="transition-delay:0.3s"><div class="why-icon">📈</div><div class="why-text"><h4>Enfocados en resultados</h4><p>Cada decisión de diseño tiene un propósito. Creamos para que tu negocio crezca, no solo para que se vea bien.</p></div></div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- CALENDARIO -->
-  <section id="calendario">
-    <div class="cal-wrap reveal">
-      <div class="section-label" style="justify-content:center">Agenda tu sesión</div>
-      <h2>¿Prefieres hablar con nosotros<br/>antes de decidir?</h2>
-      <p>Agenda tu sesión estratégica de <strong style="color:var(--white)">30 minutos totalmente GRATIS</strong>. Sin compromiso. Solo claridad sobre lo que necesita tu negocio.</p>
-      <div class="cal-embed">
-        <iframe src="https://cal.com/somos-vitrina-ssmui4" width="100%" height="600" frameborder="0" style="background:#111111;border-radius:16px"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- CTA FINAL -->
-  <section id="contacto">
-    <div class="cta-box reveal">
-      <h2>¿Listo para dar el<br/><span style="color:var(--blue)">siguiente paso?</span></h2>
-      <p>Cuéntanos tu proyecto. Te respondemos rápido y sin compromiso.<br/>Una conversación puede cambiarlo todo.</p>
-      <div class="cta-btns">
-        <a href="https://wa.me/51904113558?text=Hola%2C%20vi%20su%20trabajo%20en%20Vitrina%20Studio%20y%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20y%20presencia%20digital%20para%20mi%20negocio." target="_blank" class="btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.524 5.863L.057 23.504a.5.5 0 0 0 .61.61l5.675-1.467A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.528-5.178-1.445l-.372-.221-3.851.995.996-3.826-.241-.393A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-          Escríbenos por WhatsApp
-        </a>
-        <a href="https://wa.me/51904113558?text=Hola%2C%20vi%20su%20trabajo%20en%20Vitrina%20Studio%20y%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20y%20presencia%20digital%20para%20mi%20negocio." target="_blank" class="btn-outline">Solicitar proyecto →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
+  <!-- 12. FOOTER -->
   <footer>
-    <div class="footer-logo">
-      <img src="/assets/logo.png" width="80" height="80" alt="Vitrina Studio"/>
-      <span class="footer-logo-text">VITRINA STUDIO</span>
+    <div class="contenedor">
+      <div class="grid-footer">
+        <div class="footer-marca">
+          <img src="/assets/logo-footer.webp" alt="Logo de Vitrina Studio" width="44" height="44" loading="lazy">
+          <p>Diseño web, branding y presencia digital para negocios locales que quieren destacar.</p>
+        </div>
+        <div>
+          <h3>Navegación</h3>
+          <div class="footer-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#planes">Planes</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#sesion">Agenda tu sesión</a>
+          </div>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <div class="footer-links">
+            <a href="https://wa.me/51904113558?text=Hola%20Vitrina%20Studio%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              +51 904 113 558
+            </a>
+            <a href="#inicio">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lima, Perú
+            </a>
+            <a href="#" aria-label="Instagram de Vitrina Studio (próximamente)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+              Instagram
+            </a>
+            <a href="#" aria-label="TikTok de Vitrina Studio (próximamente)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+              TikTok
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© 2026 Vitrina Studio. Todos los derechos reservados.</span>
+        <span>Hecho en Lima, con código limpio.</span>
+      </div>
     </div>
-    <div class="social-links">
-      <a href="https://www.instagram.com/somosvitrina.pe" target="_blank" class="social-link" title="Instagram">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      </a>
-      <a href="https://www.tiktok.com/@somos.vitrina" target="_blank" class="social-link" title="TikTok">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34l-.03-8.54a8.2 8.2 0 0 0 4.79 1.52V4.84a4.85 4.85 0 0 1-1-.15z"/></svg>
-      </a>
-      <a href="https://wa.me/51904113558?text=Hola%2C%20vi%20su%20trabajo%20en%20Vitrina%20Studio%20y%20me%20gustar%C3%ADa%20cotizar%20una%20p%C3%A1gina%20web%20y%20presencia%20digital%20para%20mi%20negocio." target="_blank" class="social-link" title="WhatsApp">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.524 5.863L.057 23.504a.5.5 0 0 0 .61.61l5.675-1.467A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.528-5.178-1.445l-.372-.221-3.851.995.996-3.826-.241-.393A10 10 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
-      </a>
-    </div>
-    <p class="footer-copy">© 2026 Vitrina Studio · Lima, Perú</p>
   </footer>
 
-  <script>
-    // Cursor
-    const cursor = document.getElementById('cursor');
-    const ring = document.getElementById('cursorRing');
-    let mx=0,my=0,rx=0,ry=0;
-    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx-4+'px';cursor.style.top=my-4+'px'});
-    function animateRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx-18+'px';ring.style.top=ry-18+'px';requestAnimationFrame(animateRing)}
-    animateRing();
-    document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.style.transform='scale(3)';ring.style.opacity='0'});el.addEventListener('mouseleave',()=>{cursor.style.transform='scale(1)';ring.style.opacity='1'})});
+</div><!-- /contenido -->
 
-    // Particles
-    (function(){
-      const canvas=document.getElementById('particles-canvas');
-      const ctx=canvas.getContext('2d');
-      let particles=[];
-      function resize(){canvas.width=canvas.offsetWidth;canvas.height=canvas.offsetHeight}
-      function createParticles(){
-        particles=[];
-        const count=Math.floor((canvas.width*canvas.height)/12000);
-        for(let i=0;i<count;i++){
-          particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*1.5+0.3,vx:(Math.random()-0.5)*0.3,vy:(Math.random()-0.5)*0.3,alpha:Math.random()*0.5+0.1,blue:Math.random()>0.75});
-        }
-      }
-      function animate(){
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-        const maxDist=120;
-        particles.forEach((p,i)=>{
-          p.x+=p.vx;p.y+=p.vy;
-          if(p.x<0)p.x=canvas.width;if(p.x>canvas.width)p.x=0;
-          if(p.y<0)p.y=canvas.height;if(p.y>canvas.height)p.y=0;
-          ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-          ctx.fillStyle=p.blue?`rgba(59,130,246,${p.alpha})`:`rgba(255,255,255,${p.alpha*0.7})`;
-          ctx.fill();
-          for(let j=i+1;j<particles.length;j++){
-            const dx=particles[j].x-p.x,dy=particles[j].y-p.y,dist=Math.sqrt(dx*dx+dy*dy);
-            if(dist<maxDist){
-              const alpha=(1-dist/maxDist)*0.12;
-              ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(particles[j].x,particles[j].y);
-              ctx.strokeStyle=(p.blue||particles[j].blue)?`rgba(59,130,246,${alpha*1.5})`:`rgba(255,255,255,${alpha})`;
-              ctx.lineWidth=0.5;ctx.stroke();
-            }
-          }
-        });
-        requestAnimationFrame(animate);
-      }
-      window.addEventListener('resize',()=>{resize();createParticles()});
-      resize();createParticles();animate();
-    })();
+<script>
+(function(){
+  'use strict';
 
-    // Reveal
-    const reveals=document.querySelectorAll('.reveal');
-    const observer=new IntersectionObserver(entries=>{
-      entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*60)}});
-    },{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
-    reveals.forEach(el=>observer.observe(el));
-
-    // Nav scroll
-    window.addEventListener('scroll',()=>{
-      const banner = document.querySelector('.diag-banner');
-      if(banner){
-        if(window.scrollY > 60){
-          banner.style.display='none';
-          document.querySelector('nav').style.top='0';
-        } else {
-          banner.style.display='flex';
-          document.querySelector('nav').style.top='40px';
-        }
-      }
-      document.querySelector('nav').style.background=window.scrollY>80?'rgba(11,11,11,0.95)':'rgba(11,11,11,0.85)';
+  /* ===== Menú móvil ===== */
+  var btnMenu = document.getElementById('btnMenu');
+  var menu = document.getElementById('menuMovil');
+  btnMenu.addEventListener('click', function(){
+    var abierto = menu.classList.toggle('abierto');
+    btnMenu.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+    btnMenu.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+    document.body.style.overflow = abierto ? 'hidden' : '';
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      menu.classList.remove('abierto');
+      btnMenu.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';
     });
+  });
 
-    // Mobile menu
-    function toggleMenu(){
-      const btn=document.getElementById('hamburgerBtn');
-      const overlay=document.getElementById('menuOverlay');
-      const panel=document.getElementById('mobileMenu');
-      const isOpen=panel.classList.contains('open');
-      if(isOpen){btn.classList.remove('open');overlay.classList.remove('open');panel.classList.remove('open');setTimeout(()=>{overlay.style.display='none'},300);document.body.style.overflow='';}
-      else{overlay.style.display='block';requestAnimationFrame(()=>{btn.classList.add('open');overlay.classList.add('open');panel.classList.add('open')});document.body.style.overflow='hidden';}
-    }
-  </script>
+  /* ===== Carrusel ===== */
+  var carrusel = document.getElementById('carrusel');
+  function pasoCarrusel(){
+    var slide = carrusel.querySelector('.slide');
+    return slide ? slide.getBoundingClientRect().width + 24 : 400;
+  }
+  document.getElementById('prevSlide').addEventListener('click', function(){
+    carrusel.scrollBy({left:-pasoCarrusel(), behavior:'smooth'});
+  });
+  document.getElementById('nextSlide').addEventListener('click', function(){
+    carrusel.scrollBy({left:pasoCarrusel(), behavior:'smooth'});
+  });
+
+  /* ===== Reveal al hacer scroll ===== */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduceMotion && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
+  }
+
+  /* ===== EL CRISTAL — reflejos de vidrio ===== */
+  if(reduceMotion) return;
+
+  var canvas = document.getElementById('cristal');
+  var ctx = canvas.getContext('2d');
+  var esMovil = window.matchMedia('(max-width: 768px)').matches || ('ontouchstart' in window && navigator.maxTouchPoints > 0);
+  var dpr = Math.min(window.devicePixelRatio || 1, esMovil ? 1.25 : 2);
+  var W, H;
+
+  function dimensionar(){
+    W = window.innerWidth; H = window.innerHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  dimensionar();
+  window.addEventListener('resize', dimensionar);
+
+  /* Objetivo del "foco de luz": mouse en desktop, scroll en móvil */
+  var objX = 0.5, objY = 0.35, curX = 0.5, curY = 0.35;
+
+  if(!esMovil){
+    window.addEventListener('pointermove', function(e){
+      objX = e.clientX / W;
+      objY = e.clientY / H;
+    }, {passive:true});
+  } else {
+    window.addEventListener('scroll', function(){
+      var max = Math.max(document.documentElement.scrollHeight - H, 1);
+      var p = window.scrollY / max;
+      objX = 0.3 + 0.4 * Math.sin(p * Math.PI * 2);
+      objY = 0.2 + 0.6 * p;
+    }, {passive:true});
+  }
+
+  /* Bandas diagonales de reflejo (como luz cruzando un vidrio) */
+  var bandas = [
+    {off:-0.25, ancho:0.16, alpha:0.045, vel:0.9},
+    {off: 0.18, ancho:0.10, alpha:0.060, vel:1.0},
+    {off: 0.55, ancho:0.22, alpha:0.030, vel:0.75}
+  ];
+
+  var ultimo = 0;
+  var intervalo = esMovil ? 1000/30 : 0; /* 30fps en móvil para cuidar batería */
+
+  function pintar(t){
+    requestAnimationFrame(pintar);
+    if(intervalo && t - ultimo < intervalo) return;
+    ultimo = t;
+
+    /* easing suave hacia el objetivo */
+    curX += (objX - curX) * 0.045;
+    curY += (objY - curY) * 0.045;
+
+    ctx.clearRect(0, 0, W, H);
+
+    /* Brillo especular suave que sigue al puntero */
+    var rad = Math.max(W, H) * 0.55;
+    var g = ctx.createRadialGradient(curX*W, curY*H, 0, curX*W, curY*H, rad);
+    g.addColorStop(0, 'rgba(59,130,246,0.055)');
+    g.addColorStop(0.45, 'rgba(59,130,246,0.018)');
+    g.addColorStop(1, 'rgba(59,130,246,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, W, H);
+
+    /* Bandas diagonales: se desplazan ligeramente con el foco */
+    ctx.save();
+    ctx.translate(W/2, H/2);
+    ctx.rotate(-0.42); /* ~24 grados */
+    var diag = Math.sqrt(W*W + H*H);
+    bandas.forEach(function(b){
+      var desplaz = (curX - 0.5) * 220 * b.vel;
+      var x = b.off * diag + desplaz - diag/2;
+      var w = b.ancho * diag;
+      var lg = ctx.createLinearGradient(x, 0, x + w, 0);
+      lg.addColorStop(0, 'rgba(255,255,255,0)');
+      lg.addColorStop(0.5, 'rgba(255,255,255,' + b.alpha + ')');
+      lg.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.fillStyle = lg;
+      ctx.fillRect(x, -diag/2, w, diag);
+    });
+    ctx.restore();
+  }
+  requestAnimationFrame(pintar);
+})();
+</script>
 </body>
 </html>
