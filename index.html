@@ -206,7 +206,29 @@
     }
 
     /* ============ 3. HERO ============ */
-    .hero{padding-block:clamp(72px, 10vw, 150px) clamp(64px, 8vw, 120px)}
+    .hero{padding-block:clamp(72px, 10vw, 150px) clamp(64px, 8vw, 120px);position:relative;overflow:hidden}
+    .hero-fondo{position:absolute;inset:0;z-index:-1}
+    .hero-fondo img{
+      width:100%;height:100%;object-fit:cover;object-position:center 38%;
+      animation:zoomLento 42s ease-in-out infinite alternate;
+    }
+    @keyframes zoomLento{from{transform:scale(1)}to{transform:scale(1.1)}}
+    .hero-fondo::after{
+      content:"";position:absolute;inset:0;
+      background:
+        linear-gradient(90deg, rgba(11,11,11,.66) 0%, rgba(11,11,11,.28) 55%, rgba(11,11,11,.05) 100%),
+        linear-gradient(180deg, rgba(11,11,11,.45) 0%, rgba(11,11,11,.12) 45%, #0B0B0B 100%);
+    }
+    @media (max-width:767px){
+      .hero{text-align:center}
+      .hero h1,.hero p{margin-inline:auto}
+      .hero-ctas{justify-content:center}
+      .hero-fondo::after{
+        background:
+          linear-gradient(180deg, rgba(11,11,11,.55) 0%, rgba(11,11,11,.3) 45%, #0B0B0B 100%);
+      }
+    }
+    @media (prefers-reduced-motion: reduce){.hero-fondo img{animation:none}}
     .hero h1{max-width:13ch}
     .hero p{
       max-width:46ch;color:var(--gris-1);margin-top:var(--s-3);
@@ -345,7 +367,7 @@
     .firma{padding-block:clamp(40px,6vw,96px) 0;overflow:hidden}
     .firma-palabra{
       font-family:var(--display);font-weight:800;
-      font-size:clamp(64px, 17.5vw, 252px);
+      font-size:clamp(44px, 14.2vw, 252px);
       line-height:.85;letter-spacing:-.02em;text-align:center;
       background:linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.18));
       -webkit-background-clip:text;background-clip:text;color:transparent;
@@ -437,7 +459,14 @@
   </div>
 
   <!-- 3. HERO -->
-  <header class="hero contenedor" id="inicio">
+  <header class="hero" id="inicio">
+    <div class="hero-fondo" aria-hidden="true">
+      <picture>
+        <source media="(max-width:767px)" srcset="/assets/hero-lima-movil.webp">
+        <img src="/assets/hero-lima.webp" alt="" width="1920" height="1280" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="contenedor">
     <h1>Haz que tu marca <span class="acento">destaque</span></h1>
     <p>Diseñamos webs y marcas que convierten visitas en clientes para restaurantes, tiendas y emprendedores de Lima. Que tu negocio se vea tan bien online como lo es en persona.</p>
     <div class="hero-ctas">
@@ -445,6 +474,7 @@
       <a class="btn btn-secundario" href="#proyectos">Ver proyectos</a>
     </div>
     <span class="caption">30 minutos por videollamada · Sin costo · Sin compromiso</span>
+    </div>
   </header>
 
   <!-- 4. EL PROBLEMA -->
@@ -856,9 +886,9 @@
 
   /* Bandas diagonales de reflejo (como luz cruzando un vidrio) */
   var bandas = [
-    {off:-0.25, ancho:0.16, alpha:0.045, vel:0.9},
-    {off: 0.18, ancho:0.10, alpha:0.060, vel:1.0},
-    {off: 0.55, ancho:0.22, alpha:0.030, vel:0.75}
+    {off:-0.25, ancho:0.16, alpha:0.075, vel:0.9},
+    {off: 0.18, ancho:0.10, alpha:0.100, vel:1.0},
+    {off: 0.55, ancho:0.22, alpha:0.050, vel:0.75}
   ];
 
   var ultimo = 0;
@@ -878,8 +908,8 @@
     /* Brillo especular suave que sigue al puntero */
     var rad = Math.max(W, H) * 0.55;
     var g = ctx.createRadialGradient(curX*W, curY*H, 0, curX*W, curY*H, rad);
-    g.addColorStop(0, 'rgba(59,130,246,0.055)');
-    g.addColorStop(0.45, 'rgba(59,130,246,0.018)');
+    g.addColorStop(0, 'rgba(59,130,246,0.10)');
+    g.addColorStop(0.45, 'rgba(59,130,246,0.035)');
     g.addColorStop(1, 'rgba(59,130,246,0)');
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, W, H);
@@ -900,6 +930,18 @@
       ctx.fillStyle = lg;
       ctx.fillRect(x, -diag/2, w, diag);
     });
+
+    /* Destello viajero: recorre la pantalla cada ~14s aunque nada se mueva */
+    var ciclo = (t % 14000) / 14000;            /* 0 a 1 */
+    var dx = (ciclo * 1.6 - 0.3) * diag - diag/2;
+    var dw = 0.06 * diag;
+    var fade = Math.sin(Math.min(Math.max(ciclo, 0), 1) * Math.PI); /* entra y sale suave */
+    var dg = ctx.createLinearGradient(dx, 0, dx + dw, 0);
+    dg.addColorStop(0, 'rgba(255,255,255,0)');
+    dg.addColorStop(0.5, 'rgba(255,255,255,' + (0.09 * fade) + ')');
+    dg.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = dg;
+    ctx.fillRect(dx, -diag/2, dw, diag);
     ctx.restore();
   }
   requestAnimationFrame(pintar);
