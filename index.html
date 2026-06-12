@@ -340,11 +340,11 @@
     .carrusel{
       display:flex;gap:28px;
       width:max-content;
-      /* El autoplay se maneja vía JS con transform */
       will-change:transform;
+      cursor:grab;
+      user-select:none;-webkit-user-select:none;
     }
-    /* Pausa al pasar el cursor */
-    .carrusel-wrap:hover .carrusel{ animation-play-state:paused }
+    .carrusel:active{cursor:grabbing}
 
     /* ——— SLIDE: browser mockup real ——— */
     .slide{
@@ -785,10 +785,10 @@
       <div class="carrusel" id="carrusel" aria-label="Carrusel de proyectos">
 
         <!-- SLIDE 1: La Terraza Norteña -->
-        <a class="slide" href="https://la-terraza-nortena.netlify.app" target="_blank" rel="noopener" aria-label="Ver proyecto La Terraza Norteña">
+        <a class="slide" href="https://la-terrazanortena.netlify.app/" target="_blank" rel="noopener" aria-label="Ver proyecto La Terraza Norteña">
           <div class="slide-browser">
             <div class="browser-dots"><span></span><span></span><span></span></div>
-            <div class="browser-url">la-terraza-nortena.netlify.app</div>
+            <div class="browser-url">la-terrazanortena.netlify.app</div>
           </div>
           <div class="slide-img-wrap">
             <img src="/assets/proyecto-terraza-real.webp" alt="Web de La Terraza Norteña: carta digital con pedidos por WhatsApp" width="1200" height="675" loading="lazy">
@@ -1033,7 +1033,7 @@
     });
   });
 
-  /* ===== Carrusel autoplay infinito ===== */
+  /* ===== Carrusel autoplay infinito + arrastrable ===== */
   (function(){
     var wrap = document.getElementById('carruselWrap');
     var track = document.getElementById('carrusel');
@@ -1045,17 +1045,20 @@
     /* Clonar slides para el loop infinito */
     var slides = Array.from(track.children);
     slides.forEach(function(s){
-      track.appendChild(s.cloneNode(true));
+      var clon = s.cloneNode(true);
+      track.appendChild(clon);
     });
 
-    var px = 0;                 /* posición actual en píxeles */
-    var vel = 0.55;             /* px por frame (~33px/s a 60fps) */
-    var paused = false;
+    var px = 0;
+    var vel = 1.8;              /* más rápido que antes */
+    var dragging = false;
+    var dragStartX = 0;
+    var dragStartPx = 0;
+    var clickBlocked = false;   /* evita click al soltar drag */
     var last = null;
     var halfW = 0;
 
     function calcHalf(){
-      /* mitad del ancho original (sin clones) = punto de reset */
       var gap = 28;
       halfW = slides.reduce(function(acc, s){
         return acc + s.offsetWidth + gap;
@@ -1064,22 +1067,75 @@
     calcHalf();
     window.addEventListener('resize', calcHalf);
 
-    /* Pausar al pasar el ratón o tocar */
-    wrap.addEventListener('mouseenter', function(){ paused = true; });
-    wrap.addEventListener('mouseleave', function(){ paused = false; });
-    wrap.addEventListener('touchstart', function(){ paused = true; }, {passive:true});
-    wrap.addEventListener('touchend',   function(){ paused = false; });
+    /* --- Drag con mouse --- */
+    wrap.addEventListener('mousedown', function(e){
+      dragging = true;
+      clickBlocked = false;
+      dragStartX = e.clientX;
+      dragStartPx = px;
+      wrap.style.cursor = 'grabbing';
+      e.preventDefault();
+    });
+    window.addEventListener('mousemove', function(e){
+      if(!dragging) return;
+      var diff = dragStartX - e.clientX;
+      if(Math.abs(diff) > 5) clickBlocked = true;
+      px = dragStartPx + diff;
+      /* wrap around */
+      if(halfW > 0){
+        while(px < 0) px += halfW;
+        while(px >= halfW) px -= halfW;
+      }
+    });
+    window.addEventListener('mouseup', function(){
+      if(dragging){
+        dragging = false;
+        wrap.style.cursor = '';
+      }
+    });
 
+    /* Bloquear click en links si fue un drag */
+    wrap.addEventListener('click', function(e){
+      if(clickBlocked){
+        e.preventDefault();
+        e.stopPropagation();
+        clickBlocked = false;
+      }
+    }, true);
+
+    /* --- Drag con touch --- */
+    var touchStartX = 0;
+    wrap.addEventListener('touchstart', function(e){
+      dragging = true;
+      clickBlocked = false;
+      touchStartX = e.touches[0].clientX;
+      dragStartPx = px;
+    }, {passive:true});
+    wrap.addEventListener('touchmove', function(e){
+      if(!dragging) return;
+      var diff = touchStartX - e.touches[0].clientX;
+      if(Math.abs(diff) > 5) clickBlocked = true;
+      px = dragStartPx + diff;
+      if(halfW > 0){
+        while(px < 0) px += halfW;
+        while(px >= halfW) px -= halfW;
+      }
+    }, {passive:true});
+    wrap.addEventListener('touchend', function(){
+      dragging = false;
+    });
+
+    /* --- Animación continua --- */
     function tick(ts){
       requestAnimationFrame(tick);
       if(!last){ last = ts; }
-      var dt = Math.min(ts - last, 50); /* cap a 50ms para evitar saltos */
+      var dt = Math.min(ts - last, 50);
       last = ts;
-      if(!paused){
-        px += vel * dt / 16.67; /* normalizado a 60fps */
-        if(px >= halfW){ px -= halfW; } /* reset sin salto */
+      if(!dragging){
+        px += vel * dt / 16.67;
+        if(halfW > 0 && px >= halfW){ px -= halfW; }
       }
-      track.style.transform = 'translateX(-' + px + 'px)';
+      track.style.transform = 'translate3d(-' + px + 'px,0,0)';
     }
     requestAnimationFrame(tick);
   })();
