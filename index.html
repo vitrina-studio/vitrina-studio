@@ -1039,9 +1039,6 @@
     var track = document.getElementById('carrusel');
     if(!track || !wrap) return;
 
-    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(reduceMotion) return;
-
     /* Clonar slides para el loop infinito */
     var slides = Array.from(track.children);
     slides.forEach(function(s){
