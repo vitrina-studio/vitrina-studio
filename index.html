@@ -213,6 +213,9 @@
       animation:zoomLento 42s ease-in-out infinite alternate;
     }
     @keyframes zoomLento{from{transform:scale(1)}to{transform:scale(1.1)}}
+    .hero-fondo canvas{position:absolute;inset:0;width:100%;height:100%;display:none}
+    .hero-fondo.tiles-activo img{display:none}
+    .hero-fondo.tiles-activo canvas{display:block}
     .hero-fondo::after{
       content:"";position:absolute;inset:0;
       background:
@@ -618,11 +621,12 @@
 
   <!-- 3. HERO -->
   <header class="hero" id="inicio">
-    <div class="hero-fondo" aria-hidden="true">
+    <div class="hero-fondo" id="heroFondo" aria-hidden="true">
       <picture>
         <source media="(max-width:767px)" srcset="/assets/hero-lima-movil.webp">
-        <img src="/assets/hero-lima.webp" alt="" width="1920" height="1280" fetchpriority="high">
+        <img id="heroImg" src="/assets/hero-lima.webp" alt="" width="1920" height="1280" fetchpriority="high">
       </picture>
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
     </div>
     <div class="contenedor">
     <h1>Haz que tu marca <span class="acento">destaque</span></h1>
@@ -1141,6 +1145,96 @@
       track.style.transform = 'translate3d(-' + px + 'px,0,0)';
     }
     requestAnimationFrame(tick);
+  })();
+
+  /* ===== Hero Tiles — efecto gelatinoso (solo desktop, puntero fino + motion) ===== */
+  (function(){
+    var fondo = document.getElementById('heroFondo');
+    var canvas = document.getElementById('heroCanvas');
+    var img = document.getElementById('heroImg');
+    var hero = document.getElementById('inicio');
+    if(!fondo || !canvas || !img || !hero) return;
+
+    var finePointer = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+    var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    if(!finePointer || reduce) return; /* móvil/touch/reduced-motion → img estática, cero loop */
+
+    var ctx = canvas.getContext('2d');
+    var CONFIG = {force:46, radius:150, bounce:62, cols:24, shrink:0.22, gap:1, vpos:0.38};
+    var W=0, H=0, dpr=1, cw=0, ch=0, rows=1, tiles=[];
+    var src=document.createElement('canvas'), sctx=src.getContext('2d');
+    var mx=-9999, my=-9999, active=false, running=false, idleTimer=null, rt=null, tries=0;
+
+    /* dibuja la imagen en src con object-fit:cover y object-position center 38% */
+    function cover(){
+      var iw=img.naturalWidth, ih=img.naturalHeight;
+      if(!iw || !ih) return false;
+      var ir=iw/ih, cr=W/H, sw, sh, sx, sy;
+      if(ir>cr){ sh=ih; sw=sh*cr; sx=(iw-sw)/2; sy=0; }
+      else     { sw=iw; sh=sw/cr; sx=0; sy=(ih-sh)*CONFIG.vpos; }
+      sctx.clearRect(0,0,W,H);
+      sctx.drawImage(img, sx,sy,sw,sh, 0,0,W,H);
+      return true;
+    }
+    function build(){
+      var r=fondo.getBoundingClientRect();
+      if(r.width<2 || r.height<2) return false;
+      dpr=Math.min(window.devicePixelRatio||1, 2);
+      W=Math.round(r.width*dpr); H=Math.round(r.height*dpr);
+      canvas.width=W; canvas.height=H; src.width=W; src.height=H;
+      if(!cover()) return false;
+      cw=W/CONFIG.cols; rows=Math.max(1, Math.round(H/cw)); ch=H/rows;
+      tiles=[];
+      for(var ry=0; ry<rows; ry++) for(var c=0; c<CONFIG.cols; c++)
+        tiles.push({x:c*cw, y:ry*ch, cx:c*cw+cw/2, cy:ry*ch+ch/2, ox:0, oy:0, vx:0, vy:0, sc:0, vsc:0});
+      return true;
+    }
+    function drawStatic(){ ctx.clearRect(0,0,W,H); ctx.drawImage(src,0,0); }
+    function frame(){
+      var b=CONFIG.bounce/100, stiff=.04+(1-b)*.22, damp=.92-b*.28;
+      var R=CONFIG.radius*dpr, F=CONFIG.force*dpr, maxMove=0;
+      ctx.clearRect(0,0,W,H);
+      for(var i=0; i<tiles.length; i++){
+        var t=tiles[i], tox=0, toy=0, tsc=0;
+        if(active){
+          var dx=t.cx-mx, dy=t.cy-my, d=Math.sqrt(dx*dx+dy*dy);
+          if(d<R){ var f=1-d/R; f*=f; var inv=d>.001?1/d:0; tox=dx*inv*f*F; toy=dy*inv*f*F; tsc=f*CONFIG.shrink; }
+        }
+        t.vx=(t.vx+(tox-t.ox)*stiff)*damp;
+        t.vy=(t.vy+(toy-t.oy)*stiff)*damp;
+        t.vsc=(t.vsc+(tsc-t.sc)*stiff)*damp;
+        t.ox+=t.vx; t.oy+=t.vy; t.sc+=t.vsc;
+        var mv=Math.abs(t.vx)+Math.abs(t.vy)+Math.abs(t.ox)+Math.abs(t.oy);
+        if(mv>maxMove) maxMove=mv;
+        var s=1-t.sc, dw=cw*s, dh=ch*s;
+        ctx.drawImage(src, t.x,t.y,cw,ch, t.x+t.ox+(cw-dw)/2, t.y+t.oy+(ch-dh)/2, dw+CONFIG.gap, dh+CONFIG.gap);
+      }
+      if(!active && maxMove < 0.3){ running=false; drawStatic(); return; } /* reposo → detiene el loop */
+      requestAnimationFrame(frame);
+    }
+    function start(){ if(!running){ running=true; requestAnimationFrame(frame); } }
+    function onMove(e){
+      var r=fondo.getBoundingClientRect();
+      mx=(e.clientX-r.left)*dpr; my=(e.clientY-r.top)*dpr; active=true;
+      clearTimeout(idleTimer);
+      idleTimer=setTimeout(function(){ active=false; }, 700); /* autocierre por inactividad */
+      start();
+    }
+    function activar(){
+      if(!build()){ if(tries++ < 30){ requestAnimationFrame(activar); } return; }
+      fondo.classList.add('tiles-activo'); /* oculta img, muestra canvas */
+      drawStatic();
+      /* listeners en el hero completo: el canvas va detrás (z-index:-1), no bloquea los CTAs */
+      hero.addEventListener('pointermove', onMove, {passive:true});
+      hero.addEventListener('pointerleave', function(){ active=false; });
+      window.addEventListener('resize', function(){
+        clearTimeout(rt);
+        rt=setTimeout(function(){ if(build()) drawStatic(); }, 150);
+      });
+    }
+
+    if(img.complete && img.naturalWidth) activar();
+    else img.addEventListener('load', activar, {once:true});
   })();
 
   /* ===== Reveal al hacer scroll ===== */
